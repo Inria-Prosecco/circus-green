@@ -2,11 +2,15 @@
 
 HAX_BRANCH="${HAX_BRANCH:-main}"
 CHARON_BRANCH="${CHARON_BRANCH:-main}"
+AENEAS_BRANCH="${AENEAS_BRANCH:-main}"
+EURYDICE_BRANCH="${EURYDICE_BRANCH:-main}"
 
 # update `flake.lock`
 nix flake update \
    --override-input hax "github:hacspec/hax?ref=$HAX_BRANCH" \
-   --override-input charon "github:aeneasverif/charon?ref=$CHARON_BRANCH"
+   --override-input charon "github:aeneasverif/charon?ref=$CHARON_BRANCH" \
+   --override-input aeneas "github:aeneasverif/aeneas?ref=$AENEAS_BRANCH" \
+   --override-input eurydice "github:aeneasverif/eurydice?ref=$EURYDICE_BRANCH"
 
 # update `charon.lock`
 HAX_REV=$(nix eval --raw .#inputs.hax.rev)
@@ -27,6 +31,8 @@ check () {
 rm -f STATUS.txt
 check "hax" "$HAX_BRANCH"
 check "charon" "$CHARON_BRANCH"
+check "aeneas" "$AENEAS_BRANCH"
+check "eurydice" "$EURYDICE_BRANCH"
 
 # commit changes
 [[ $(git diff) != "" ]] || exit 0
