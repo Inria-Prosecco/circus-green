@@ -1,0 +1,22 @@
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: update
+        run: ./update.sh
+
+      - name: push
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main

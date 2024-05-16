@@ -28,7 +28,8 @@ rm -f STATUS.txt
 check "hax" "$HAX_BRANCH"
 check "charon" "$CHARON_BRANCH"
 
-# # commit changes
-# git config --local user.name "Prosecco"
-# git config --local user.email "prosecco@inria.fr"
-# git commit -am "nightly update"
+# commit changes
+[[ $(git diff) != "" ]] || exit 0
+git config --local user.name "Prosecco"
+git config --local user.email "prosecco@inria.fr"
+git commit -am "nightly update"
