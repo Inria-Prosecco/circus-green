@@ -12,11 +12,8 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, nix]
     steps:
-      - name: install Nix
-        uses: DeterminateSystems/nix-installer-action@main
-
       - name: checkout
         uses: actions/checkout@v4
 
