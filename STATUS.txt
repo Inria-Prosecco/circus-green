@@ -1,4 +1,2 @@
-❌ hax (main)
-✅ charon (main)
-✅ aeneas (main)
-❌ eurydice (main)
+✅ hax (main)
+✅ eurydice (main)

@@ -5,14 +5,6 @@ on:
         description: "Hax"
         type: "string"
         default: "main"
-      charon:
-        description: "Charon"
-        type: "string"
-        default: "main"
-      aeneas:
-        description: "Aeneas"
-        type: "string"
-        default: "main"
       eurydice:
         description: "Eurydice"
         type: "string"
@@ -29,6 +21,4 @@ jobs:
         run: ./update.sh
         env:
           HAX_BRANCH: ${{ inputs.hax }}
-          CHARON_BRANCH: ${{ inputs.charon }}
-          AENEAS_BRANCH: ${{ inputs.aeneas }}
           EURYDICE_BRANCH: ${{ inputs.eurydice }}

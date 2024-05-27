@@ -1,27 +1,12 @@
 #!/usr/bin/env bash
 
 HAX_BRANCH="${HAX_BRANCH:-main}"
-CHARON_BRANCH="${CHARON_BRANCH:-main}"
-AENEAS_BRANCH="${AENEAS_BRANCH:-main}"
 EURYDICE_BRANCH="${EURYDICE_BRANCH:-main}"
 
 # update `flake.lock`
 nix flake update \
    --override-input hax "github:hacspec/hax?ref=$HAX_BRANCH" \
-   --override-input charon "github:aeneasverif/charon?ref=$CHARON_BRANCH" \
-   --override-input aeneas "github:aeneasverif/aeneas?ref=$AENEAS_BRANCH" \
    --override-input eurydice "github:aeneasverif/eurydice?ref=$EURYDICE_BRANCH"
-
-# update `charon.lock`
-HAX_REV=$(nix eval --raw .#inputs.hax.rev)
-cp -r $(nix eval --raw .#inputs.charon) charon
-chmod -R +w charon
-cd charon/charon
-nix run nixpkgs#cargo -- update -p hax-frontend-exporter --precise $HAX_REV
-nix run nixpkgs#cargo -- update -p hax-frontend-exporter-options --precise $HAX_REV
-cd ../..
-cp charon/charon/Cargo.lock charon.lock
-rm -rf charon
 
 # update `STATUS.txt`
 check () {
@@ -30,8 +15,6 @@ check () {
 }
 rm -f STATUS.txt
 check "hax" "$HAX_BRANCH"
-check "charon" "$CHARON_BRANCH"
-check "aeneas" "$AENEAS_BRANCH"
 check "eurydice" "$EURYDICE_BRANCH"
 
 # commit changes
