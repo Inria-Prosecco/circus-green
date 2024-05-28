@@ -5,10 +5,18 @@ on:
         description: "Hax"
         type: "string"
         default: "main"
+      charon:
+        description: "Charon"
+        type: "string"
+        default: "main"
       eurydice:
         description: "Eurydice"
         type: "string"
         default: "main"
+      libcrux:
+        description: "Libcrux"
+        type: "string"
+        default: "dev"
 
 jobs:
   test:
@@ -16,9 +24,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-
       - name: update
         run: ./update.sh
         env:
           HAX_BRANCH: ${{ inputs.hax }}
+          CHARON_BRANCH: ${{ inputs.charon }}
           EURYDICE_BRANCH: ${{ inputs.eurydice }}
+          LIBCRUX_BRANCH: ${{ inputs.libcrux }}
