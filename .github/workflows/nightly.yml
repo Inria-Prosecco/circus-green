@@ -30,6 +30,7 @@ jobs:
         uses: zulip/github-actions-zulip/send-message@v1
         with:
           api-key: ${{ secrets.ZULIP_API_KEY }}
+          email: prosecco@inria.fr
           organization-url: https://hacspec.zulipchat.com
           to: 440084
           type: stream
@@ -41,6 +42,7 @@ jobs:
         uses: zulip/github-actions-zulip/send-message@v1
         with:
           api-key: ${{ secrets.ZULIP_API_KEY }}
+          email: prosecco@inria.fr
           organization-url: https://hacspec.zulipchat.com
           to: 440084
           type: stream
