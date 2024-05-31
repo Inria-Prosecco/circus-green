@@ -20,8 +20,11 @@ jobs:
 
       - name: generate zulip message
         run: |
-          echo "*Nightly update*" >> $GITHUB_OUTPUT
-          nix shell nixpkgs#jq --command ./message.sh >> $GITHUB_OUTPUT
+          {
+            echo "*Nightly update*"
+            nix shell nixpkgs#jq --command ./message.sh
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
         id: message
         env:
           RUN: ${{ github.run_id }}

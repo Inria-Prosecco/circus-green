@@ -35,8 +35,11 @@ jobs:
 
       - name: generate zulip message
         run: |
-          echo "*Manual run*" >> $GITHUB_OUTPUT
-          nix shell nixpkgs#jq --command ./message.sh >> $GITHUB_OUTPUT
+          {
+            echo "*Manual run*"
+            nix shell nixpkgs#jq --command ./message.sh
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
         id: message
         env:
           RUN: ${{ github.run_id }}
