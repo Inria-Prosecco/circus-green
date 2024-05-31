@@ -24,6 +24,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+
       - name: update
         run: ./update.sh
         env:
@@ -31,3 +32,32 @@ jobs:
           CHARON_BRANCH: ${{ inputs.charon }}
           EURYDICE_BRANCH: ${{ inputs.eurydice }}
           LIBCRUX_BRANCH: ${{ inputs.libcrux }}
+
+      - name: generate zulip message
+        run: |
+          echo "*Manual run*"
+          nix shell nixpkgs#jq --command ./message.sh
+        id: message
+        env:
+          RUN: ${{ github.run_id }}
+
+      - name: zulip info message
+        uses: zulip/github-actions-zulip/send-message@v1
+        with:
+          api-key: ${{ secrets.ZULIP_API_KEY }}
+          organization-url: https://hacspec.zulipchat.com
+          to: 440084
+          type: stream
+          topic: ci
+          content: ${{ steps.message.outputs.stdout }}
+
+      - name: zulip error message
+        if: ${{ failure() }}
+        uses: zulip/github-actions-zulip/send-message@v1
+        with:
+          api-key: ${{ secrets.ZULIP_API_KEY }}
+          organization-url: https://hacspec.zulipchat.com
+          to: 440084
+          type: stream
+          topic: ci
+          content: Unexpected Error: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

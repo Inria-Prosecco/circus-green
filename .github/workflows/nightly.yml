@@ -17,3 +17,32 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           branch: main
+
+      - name: generate zulip message
+        run: |
+          echo "*Nightly update*"
+          nix shell nixpkgs#jq --command ./message.sh
+        id: message
+        env:
+          RUN: ${{ github.run_id }}
+
+      - name: zulip info message
+        uses: zulip/github-actions-zulip/send-message@v1
+        with:
+          api-key: ${{ secrets.ZULIP_API_KEY }}
+          organization-url: https://hacspec.zulipchat.com
+          to: 440084
+          type: stream
+          topic: ci
+          content: ${{ steps.message.outputs.stdout }}
+
+      - name: zulip error message
+        if: ${{ failure() }}
+        uses: zulip/github-actions-zulip/send-message@v1
+        with:
+          api-key: ${{ secrets.ZULIP_API_KEY }}
+          organization-url: https://hacspec.zulipchat.com
+          to: 440084
+          type: stream
+          topic: ci
+          content: Unexpected Error: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
