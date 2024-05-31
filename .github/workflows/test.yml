@@ -60,4 +60,4 @@ jobs:
           to: 440084
           type: stream
           topic: ci
-          content: Unexpected Error: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          content: "Unexpected Error: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
