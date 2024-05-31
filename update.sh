@@ -14,7 +14,9 @@ nix flake update \
 
 # update `STATUS.txt`
 check () {
+    echo "##[group]$1"
     STATUS=$(nix build -L --no-link .#packages.x86_64-linux."$1" && echo ✅ || echo ❌)
+    echo "##[endgroup]"
     echo "$STATUS $1 ($2)" >> STATUS.txt
 }
 rm -f STATUS.txt
