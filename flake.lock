@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "bertie": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1713373438,
+        "narHash": "sha256-Q7k/Ds125eyOSkmMt9ZyvSLpAdIP//Y7a5gT0Yi7MXM=",
+        "owner": "cryspen",
+        "repo": "bertie",
+        "rev": "39a08d359a480432adb4040f61c6171a307eb8b6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cryspen",
+        "repo": "bertie",
+        "type": "github"
+      }
+    },
     "charon": {
       "inputs": {
         "crane": "crane",
@@ -566,6 +582,7 @@
     },
     "root": {
       "inputs": {
+        "bertie": "bertie",
         "charon": "charon",
         "crane": [
           "charon",

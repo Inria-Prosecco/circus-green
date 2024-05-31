@@ -12,7 +12,7 @@ echo ""
 echo "*Locked dependencies:*"
 cat flake.lock | jq -r '
     .nodes |
-    .[ "nixpkgs", "fstar", "karamel", "hax", "charon", "eurydice", "libcrux" ] |
+    .[ "nixpkgs", "fstar", "karamel", "hax", "charon", "eurydice", "libcrux", "bertie" ] |
     .locked |
     .repo + ": https://github.com/" + .owner + "/" + .repo + "/commit/" + .rev
     '

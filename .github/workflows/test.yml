@@ -17,6 +17,10 @@ on:
         description: "Libcrux"
         type: "string"
         default: "dev"
+      bertie:
+        description: "Bertie"
+        type: "string"
+        default: "main"
 
 jobs:
   test:
@@ -32,6 +36,7 @@ jobs:
           CHARON_BRANCH: ${{ inputs.charon }}
           EURYDICE_BRANCH: ${{ inputs.eurydice }}
           LIBCRUX_BRANCH: ${{ inputs.libcrux }}
+          BERTIE_BRANCH: ${{ inputs.bertie }}
 
       - name: generate zulip message
         run: |
