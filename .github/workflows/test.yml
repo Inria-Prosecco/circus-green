@@ -35,8 +35,8 @@ jobs:
 
       - name: generate zulip message
         run: |
-          echo "*Manual run*"
-          nix shell nixpkgs#jq --command ./message.sh
+          echo "*Manual run*" >> $GITHUB_OUTPUT
+          nix shell nixpkgs#jq --command ./message.sh >> $GITHUB_OUTPUT
         id: message
         env:
           RUN: ${{ github.run_id }}
@@ -50,7 +50,7 @@ jobs:
           to: 440084
           type: stream
           topic: ci
-          content: ${{ steps.message.outputs.stdout }}
+          content: ${{join(steps.message.outputs.*, '\n')}}
 
       - name: zulip error message
         if: ${{ failure() }}
