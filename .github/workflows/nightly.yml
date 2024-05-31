@@ -20,11 +20,8 @@ jobs:
 
       - name: generate zulip message
         run: |
-          {
-            echo "*Nightly update*"
-            nix shell nixpkgs#jq --command ./message.sh
-            echo EOF
-          } >> "$GITHUB_OUTPUT"
+          OUTPUT=$(echo "*Nightly update*\n$(nix shell nixpkgs#jq --command ./message.sh)")
+          echo "message=$OUTPUT" >> $GITHUB_OUTPUT
         id: message
         env:
           RUN: ${{ github.run_id }}
@@ -38,7 +35,7 @@ jobs:
           to: 440084
           type: stream
           topic: ci
-          content: ${{join(steps.message.outputs.*, '\n')}}
+          content: ${{ steps.message.outputs.message }}
 
       - name: zulip error message
         if: ${{ failure() }}
