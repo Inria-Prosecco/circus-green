@@ -30,24 +30,18 @@ jobs:
           RUN: ${{ github.run_id }}
 
       - name: zulip info message
-        uses: zulip/github-actions-zulip/send-message@v1
+        uses: slackapi/slack-github-action@v1.25.0
         with:
-          api-key: ${{ secrets.ZULIP_API_KEY }}
-          email: prosecco@inria.fr
-          organization-url: https://hacspec.zulipchat.com
-          to: 440084
-          type: stream
-          topic: ci
-          content: ${{ env.MSG }}
+          payload: |
+            { "text": ${{ toJSON(env.MSG) }} }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.ZULIP_WEBHOOK_URL }}
 
       - name: zulip error message
         if: ${{ failure() }}
-        uses: zulip/github-actions-zulip/send-message@v1
+        uses: slackapi/slack-github-action@v1.25.0
         with:
-          api-key: ${{ secrets.ZULIP_API_KEY }}
-          email: prosecco@inria.fr
-          organization-url: https://hacspec.zulipchat.com
-          to: 440084
-          type: stream
-          topic: ci
-          content: "Unexpected Error: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          payload: |
+            { "text": "Unexpected Error: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.ZULIP_WEBHOOK_URL }}
