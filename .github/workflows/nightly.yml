@@ -29,7 +29,7 @@ jobs:
         env:
           RUN: ${{ github.run_id }}
 
-      - name: zulip info message
+      - name: send zulip info message
         uses: slackapi/slack-github-action@v1.25.0
         with:
           payload: |
@@ -37,7 +37,7 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.ZULIP_WEBHOOK_URL }}
 
-      - name: zulip error message
+      - name: send zulip error message
         if: ${{ failure() }}
         uses: slackapi/slack-github-action@v1.25.0
         with:
