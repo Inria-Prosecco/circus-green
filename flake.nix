@@ -1,5 +1,6 @@
 {
   inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
     charon = {
       url = "github:aeneasverif/charon";
       inputs.nixpkgs.follows = "eurydice/nixpkgs";
@@ -25,11 +26,8 @@
 
   outputs =
     inputs:
-    let
-      system = "x86_64-linux";
-    in
-    {
-      packages.${system} = {
+    inputs.flake-utils.lib.eachDefaultSystem (system: {
+      packages = {
         hax = inputs.hax.packages.${system}.hax;
         charon = inputs.charon.packages.${system}.default;
         eurydice = inputs.eurydice.packages.${system}.default;
@@ -37,5 +35,5 @@
         bertie = inputs.bertie.packages.${system}.default;
         inherit inputs;
       };
-    };
+    });
 }
