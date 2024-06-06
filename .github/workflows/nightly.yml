@@ -13,6 +13,13 @@ jobs:
       - name: update
         run: ./update.sh
 
+      - name: commit
+        run: |
+          [[ $(git diff) != "" ]] || exit 0
+          git config --local user.name "Prosecco"
+          git config --local user.email "prosecco@inria.fr"
+          git commit -am "nightly update"
+
       - name: push
         uses: ad-m/github-push-action@master
         with:

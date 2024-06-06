@@ -27,9 +27,3 @@ check "charon" "$CHARON_BRANCH"
 check "eurydice" "$EURYDICE_BRANCH"
 check "ml-kem" "$LIBCRUX_BRANCH"
 check "bertie" "$BERTIE_BRANCH"
-
-# commit changes
-[[ $(git diff) != "" ]] || exit 0
-git config --local user.name "Prosecco"
-git config --local user.email "prosecco@inria.fr"
-git commit -am "nightly update"
