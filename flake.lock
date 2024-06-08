@@ -104,11 +104,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1717717525,
-        "narHash": "sha256-qz47d6AFKJ6UMJEfSAODizlkF49cnCbVjSz4W9EF6eQ=",
+        "lastModified": 1717805296,
+        "narHash": "sha256-QHpzVtqrEsSW3xaOB/oA0tBCPVfhN+Pp5CM8oTow36Q=",
         "owner": "aeneasverif",
         "repo": "eurydice",
-        "rev": "c7e41b8d019c882585eb4054057b5d8ad6c33c10",
+        "rev": "1482f038eb8000f4d0dc43345fbcbf95b97e0701",
         "type": "github"
       },
       "original": {
