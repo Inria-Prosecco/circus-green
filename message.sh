@@ -10,7 +10,7 @@ echo "*Statuses:*"
 cat STATUS.txt
 echo ""
 echo "*Locked dependencies:*"
-cat good.lock flake.lock | jq -s -r '
+cat flake.lock good.lock | jq -s -r '
     map( .nodes |
          [ .nixpkgs, .fstar, .karamel, .hax, .charon, .eurydice, .libcrux, .bertie ] |
          map( .locked )
