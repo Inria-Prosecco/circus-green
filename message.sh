@@ -16,5 +16,5 @@ cat good.lock flake.lock | jq -s -r '
          [ .nixpkgs, .fstar, .karamel, .hax, .charon, .eurydice, .libcrux, .bertie ] |
          map( .locked )
     ) | transpose | .[] |
-    (.[0].repo + ": " + (.[0] | link) + " -> " + (.[1] | link))
+    ("| " + .[0].repo + " | " + (.[0] | link) + " | " + (.[1] | link) + " |")
     '
