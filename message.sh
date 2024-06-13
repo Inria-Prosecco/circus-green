@@ -10,8 +10,6 @@ echo "*Statuses:*"
 cat STATUS.txt
 echo ""
 echo "*Locked dependencies:*"
-echo "| Project | Commit A | Commit B |"
-echo "|-|-|-|"
 cat good.lock flake.lock | jq -s -r '
     def link: "[" + .rev + "](https://github.com/" + .owner + "/" + .repo + "/commit/" + .rev + ")";
     map( .nodes |
