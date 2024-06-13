@@ -27,3 +27,8 @@ check "charon" "$CHARON_BRANCH"
 check "eurydice" "$EURYDICE_BRANCH"
 check "ml-kem" "$LIBCRUX_BRANCH"
 check "bertie" "$BERTIE_BRANCH"
+
+if ! cat STATUS.txt | grep -q ❌
+then
+    cp flake.lock good.lock
+fi
