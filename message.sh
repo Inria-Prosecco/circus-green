@@ -11,10 +11,9 @@ cat STATUS.txt
 echo ""
 echo "*Locked dependencies:*"
 cat good.lock flake.lock | jq -s -r '
-    def link: "[" + .rev + "](https://github.com/" + .owner + "/" + .repo + "/commit/" + .rev + ")";
     map( .nodes |
          [ .nixpkgs, .fstar, .karamel, .hax, .charon, .eurydice, .libcrux, .bertie ] |
          map( .locked )
     ) | transpose | .[] |
-    (.[0].repo + ": " + (.[0] | link) + " -> " + (.[1] | link))
+    (.[0].repo + ": https://github.com/" + .[0].owner + "/" + .[0].repo + "/compare/" + .[0].rev + "..." + .[1].rev)
     '
