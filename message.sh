@@ -15,5 +15,5 @@ cat flake.lock good.lock | jq -s -r '
          [ .nixpkgs, .fstar, .karamel, .hax, .charon, .eurydice, .libcrux, .bertie ] |
          map( .locked )
     ) | transpose | .[] |
-    (.[0].repo + ": https://github.com/" + .[0].owner + "/" + .[0].repo + "/compare/" + .[0].rev + "..." + .[1].rev)
+    (.[0].repo + ": https://github.com/" + .[0].owner + "/" + .[0].repo + "/compare/" + (.[0].rev | .[0:8]) + "..." + (.[1].rev | .[0:8]))
     '
