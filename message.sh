@@ -9,11 +9,11 @@ echo ""
 echo "*Statuses:*"
 cat STATUS.txt
 echo ""
-echo "*Locked dependencies:*"
+echo "*Tried to update:*"
 cat flake.lock good.lock | jq -s -r '
     map( .nodes |
          [ .nixpkgs, .fstar, .karamel, .hax, .charon, .eurydice, .libcrux, .bertie ] |
          map( .locked )
-    ) | transpose | .[] |
+    ) | transpose | map(select(.[0].rev != .[1].rev)) | .[] |
     (.[0].repo + ": [" + .[0].rev[0:8] + ".." + .[1].rev[0:8] + "](https://github.com/" + .[0].owner + "/" + .[0].repo + "/compare/" + .[0].rev[0:8] + "..." + .[1].rev[0:8] + ")")
     '
