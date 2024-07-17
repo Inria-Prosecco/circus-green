@@ -16,7 +16,7 @@ on:
       libcrux:
         description: "Libcrux"
         type: "string"
-        default: "dev"
+        default: "main"
       bertie:
         description: "Bertie"
         type: "string"
