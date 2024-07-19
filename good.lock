@@ -147,11 +147,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1721218592,
-        "narHash": "sha256-kOCXPbyi5CGAzMlM9sPdThtSDFHyr9k3DDt0j8AY8I8=",
+        "lastModified": 1721318310,
+        "narHash": "sha256-fqNX9b1EC3lfctVORsrfg7COS0Ao9INm+WhFffm3RRM=",
         "owner": "aeneasverif",
         "repo": "eurydice",
-        "rev": "16306a309edf4e9fb16ac8d38af01f049ffdb553",
+        "rev": "4d6cf6308cb714aadcd1df0ba5f71977ec6c4a99",
         "type": "github"
       },
       "original": {
@@ -407,11 +407,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1721231410,
-        "narHash": "sha256-lUPa0+s/7+D1MADHyFZZ9AqF8IiAXFErqe0EFK9oxZw=",
+        "lastModified": 1721318358,
+        "narHash": "sha256-VdEM+ByrMEZDho8JMCTtXTTh3R3A4r5nEzYYDPgRj8g=",
         "owner": "hacspec",
         "repo": "hax",
-        "rev": "09a454ceb09d9d3eb05424830c9c6b52b475dc40",
+        "rev": "fdc00003023f607928c837c1aeca22530a0a63a9",
         "type": "github"
       },
       "original": {
@@ -474,11 +474,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1721225609,
-        "narHash": "sha256-jFNKf9enJAw4/n8pjeZ0J2IKb6GJv4EjVXj8N806Trk=",
+        "lastModified": 1721315355,
+        "narHash": "sha256-OBxOZUUwxcgo318XnbfpfM+yrrdh4igBNKUPTqxFRqI=",
         "owner": "cryspen",
         "repo": "libcrux",
-        "rev": "f2b10413ba13cf749325351ab9f8727fe11828b2",
+        "rev": "c9c098bdea22047a1eb811ddf3468543855da224",
         "type": "github"
       },
       "original": {
