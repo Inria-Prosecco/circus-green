@@ -474,11 +474,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1725434447,
-        "narHash": "sha256-azcJDpdUTRmd/tJW28bo1Y4kME8LxwogxED7/NTtfco=",
+        "lastModified": 1725614551,
+        "narHash": "sha256-o8nNFd8HFwUP9uzN+jBTX4XpRF7LoHENxrqj11OlpeI=",
         "owner": "cryspen",
         "repo": "libcrux",
-        "rev": "8daadb74271297fad6727399db80788332266851",
+        "rev": "b1c4c44f0c5a343e6ac8dd5260007eefdc9b6928",
         "type": "github"
       },
       "original": {
