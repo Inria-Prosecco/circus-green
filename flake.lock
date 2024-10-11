@@ -401,11 +401,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1728482167,
-        "narHash": "sha256-AxhRwRk9pGpo/bX84vPvPtNjmh2ntW0xtd1+HvPw6jo=",
+        "lastModified": 1728575031,
+        "narHash": "sha256-R/ybWVa1uvOxQRgnx+L9SZ/xwqV02lZ7XlR6PVa5s7w=",
         "owner": "hacspec",
         "repo": "hax",
-        "rev": "0fc089babac7c776a28386c4e952dd67cd94e066",
+        "rev": "19fe681ce90589b1e0e800863b1928c953a371c5",
         "type": "github"
       },
       "original": {
