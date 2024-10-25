@@ -2,4 +2,4 @@
 ✅ charon (main)
 ✅ eurydice (main)
 ✅ ml-kem (main)
-✅ bertie (main)
+❌ bertie (main)
