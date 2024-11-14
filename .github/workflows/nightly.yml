@@ -134,7 +134,7 @@ jobs:
           } >> "$GITHUB_ENV"
 
       - name: push to main
-        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        if: ${{ github.event_name == 'schedule' }}
         run: git push origin HEAD:main
 
       - name: send zulip info message
