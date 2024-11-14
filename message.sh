@@ -1,19 +1,36 @@
 #!/usr/bin/env bash
 
-cat STATUS.txt | grep '❌' > /dev/null && echo '❌❌❌' || echo '✅✅✅'
+echo "*Nightly update*"
+if [[ "$(jq 'map(.result == "success") | all' results.json)" == "true" ]]; then
+    echo '✅✅✅'
+else
+    echo '❌❌❌'
+fi
 echo ""
+
 echo "*Links:*"
-echo "commit: https://github.com/inria-prosecco/circus-green/commit/$(git show-ref --hash refs/heads/main)"
+COMMIT="$(git rev-parse HEAD)"
+echo "commit: https://github.com/inria-prosecco/circus-green/commit/$COMMIT"
 echo "run: https://github.com/inria-prosecco/circus-green/actions/runs/$RUN"
 echo ""
+
 echo "*Statuses:*"
-cat STATUS.txt
+for project in hax charon eurydice ml-kem bertie; do
+    status="$(jq -r 'if .["'"$project"'"].result == "success" then "✅" else "❌" end' results.json)"
+    echo "$status $project (main)"
+done
 echo ""
+
 echo "*Tried to update:*"
+git show origin/main:flake.lock > good.lock
 cat flake.lock good.lock | jq -s -r '
     map( .nodes |
          [ .fstar, .karamel, .hax, .charon, .eurydice, .libcrux, .bertie ] |
          map( .locked )
-    ) | transpose | map(select(.[0].rev != .[1].rev)) | .[] |
-    (.[0].repo + ": [" + .[1].rev[0:8] + ".." + .[0].rev[0:8] + "](https://github.com/" + .[0].owner + "/" + .[0].repo + "/compare/" + .[1].rev[0:8] + "..." + .[0].rev[0:8] + ")")
+    )
+    | transpose
+    | .[]
+    | select(.[0].rev != .[1].rev)
+    | "\(.[1].rev[0:8])..\(.[0].rev[0:8])" as $range
+    | "\(.[0].repo): [\($range)](https://github.com/\(.[0].owner)/\(.[0].repo)/compare/\($range))"
     '

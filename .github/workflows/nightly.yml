@@ -2,42 +2,143 @@ on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
+    inputs:
+      hax:
+        description: "Hax"
+        type: "string"
+        default: "main"
+      charon:
+        description: "Charon"
+        type: "string"
+        default: "main"
+      eurydice:
+        description: "Eurydice"
+        type: "string"
+        default: "main"
+      libcrux:
+        description: "Libcrux"
+        type: "string"
+        default: "main"
+      bertie:
+        description: "Bertie"
+        type: "string"
+        default: "main"
+  push:
+    branches-ignore:
+      - main
+
+# Cancel previous versions of this job that are still running.
+concurrency:
+  group: nightly
+  cancel-in-progress: true
 
 jobs:
-  nightly:
+  update-flake:
     runs-on: [self-hosted, linux, nix]
     steps:
       - name: checkout
         uses: actions/checkout@v4
 
       - name: update
+        env:
+          HAX_BRANCH: ${{ inputs.hax }}
+          CHARON_BRANCH: ${{ inputs.charon }}
+          EURYDICE_BRANCH: ${{ inputs.eurydice }}
+          LIBCRUX_BRANCH: ${{ inputs.libcrux }}
+          BERTIE_BRANCH: ${{ inputs.bertie }}
         run: ./update.sh
 
+      # Commit the update onto a new branch
       - name: commit
         run: |
           [[ $(git diff) != "" ]] || exit 0
           git config --local user.name "Prosecco"
           git config --local user.email "prosecco@inria.fr"
+          git checkout -b nightly
           git commit -am "nightly update"
+          git push origin --force nightly:nightly
 
-      - name: push
-        uses: ad-m/github-push-action@master
+  # This would be nicer as a matrix, but that hits limits of what github actions can currenctly express. See e.g.:
+  # - https://github.com/orgs/community/discussions/17245
+  # - https://github.com/orgs/community/discussions/26640
+  # - https://github.com/actions/runner/pull/2477
+  hax:
+    needs: update-flake
+    runs-on: [self-hosted, linux, nix]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
         with:
-          branch: main
+          ref: nightly
+      - run: nix build -L --no-link ".#hax"
 
-      - name: generate zulip message
-        run: |
-          {
-            echo 'MSG<<EOF'
-            echo "*Nightly update*"
-            nix shell nixpkgs#jq --command ./message.sh
-            echo EOF
-          } >> "$GITHUB_ENV"
+  charon:
+    needs: update-flake
+    runs-on: [self-hosted, linux, nix]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: nightly
+      - run: nix build -L --no-link ".#charon"
+
+  eurydice:
+    needs: update-flake
+    runs-on: [self-hosted, linux, nix]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: nightly
+      - run: nix build -L --no-link ".#eurydice"
+
+  ml-kem:
+    needs: update-flake
+    runs-on: [self-hosted, linux, nix]
+    steps:
+      - name: checkout
+        with:
+          ref: nightly
+        uses: actions/checkout@v4
+      - run: nix build -L --no-link ".#ml-kem"
+
+  bertie:
+    needs: update-flake
+    runs-on: [self-hosted, linux, nix]
+    steps:
+      - name: checkout
+        with:
+          ref: nightly
+        uses: actions/checkout@v4
+      - run: nix build -L --no-link ".#bertie"
+
+  process_results:
+    needs: [hax, charon, eurydice, ml-kem, bertie]
+    runs-on: [self-hosted, linux, nix]
+    if: ${{ success() || failure() }} # Will always run unless canceled
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: nightly
+          fetch-depth: 0 # deep clone in order to get access to other commits
+
+      - name: generate results message
         env:
           RUN: ${{ github.run_id }}
+          RESULTS: ${{ toJSON(needs) }}
+        run: |
+          echo "$RESULTS" > results.json
+          nix shell nixpkgs#jq --command ./message.sh | tee message.txt
+          {
+            echo 'MSG<<EOF'
+            cat message.txt
+            echo EOF
+          } >> "$GITHUB_ENV"
 
       - name: send zulip info message
         uses: slackapi/slack-github-action@v1.25.0
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         with:
           payload: |
             { "text": ${{ toJSON(env.MSG) }} }
@@ -45,10 +146,23 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.ZULIP_WEBHOOK_URL }}
 
       - name: send zulip error message
-        if: ${{ failure() }}
+        if: ${{ failure() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') }}
         uses: slackapi/slack-github-action@v1.25.0
         with:
           payload: |
             { "text": "Unexpected Error: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.ZULIP_WEBHOOK_URL }}
+
+  push_to_main:
+    needs: [hax, charon, eurydice, ml-kem, bertie, process_results]
+    runs-on: [self-hosted, linux, nix]
+    if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: nightly
+
+      - name: push to main
+        run: git push origin HEAD:main
