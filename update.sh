@@ -14,7 +14,7 @@ nix flake update \
    --override-input libcrux "github:cryspen/libcrux?ref=$LIBCRUX_BRANCH" \
    --override-input bertie "github:cryspen/bertie?ref=$BERTIE_BRANCH"
 
-# Generate a `Cargo.lock` file for libcrux
+# Update the `Cargo.lock` file we keep for libcrux
 LIBCRUX_COMMIT="$(nix shell nixpkgs#jq --command jq -r .nodes.libcrux.locked.rev flake.lock)"
 git clone https://github.com/cryspen/libcrux
 cd libcrux
