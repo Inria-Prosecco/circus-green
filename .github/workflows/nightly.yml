@@ -53,7 +53,7 @@ jobs:
         run: |
           git config --local user.name "Prosecco"
           git config --local user.email "prosecco@inria.fr"
-          git commit -am "nightly update"
+          [[ $(git diff) != "" ]] && git commit -am "nightly update"
           git push origin --force HEAD:nightly
 
   # This would be nicer as a matrix, but that hits limits of what github actions can currenctly express. See e.g.:
