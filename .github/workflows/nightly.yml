@@ -51,16 +51,13 @@ jobs:
       # Commit the update onto a new branch
       - name: commit
         run: |
-          [[ $(git diff) != "" ]] || exit 0
           git config --local user.name "Prosecco"
           git config --local user.email "prosecco@inria.fr"
-          git checkout -b nightly
           git commit -am "nightly update"
-          git push origin --force nightly:nightly
+          git push origin --force HEAD:nightly
 
   # This would be nicer as a matrix, but that hits limits of what github actions can currenctly express. See e.g.:
   # - https://github.com/orgs/community/discussions/17245
-  # - https://github.com/orgs/community/discussions/26640
   # - https://github.com/actions/runner/pull/2477
   hax:
     needs: update-flake
