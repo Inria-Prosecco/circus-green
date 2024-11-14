@@ -133,6 +133,10 @@ jobs:
             echo EOF
           } >> "$GITHUB_ENV"
 
+      - name: push to main
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        run: git push origin HEAD:main
+
       - name: send zulip info message
         uses: slackapi/slack-github-action@v1.25.0
         if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
@@ -150,16 +154,3 @@ jobs:
             { "text": "Unexpected Error: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.ZULIP_WEBHOOK_URL }}
-
-  push_to_main:
-    needs: [hax, charon, eurydice, ml-kem, bertie, process_results]
-    runs-on: [self-hosted, linux, nix]
-    if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
-    steps:
-      - name: checkout
-        uses: actions/checkout@v4
-        with:
-          ref: nightly
-
-      - name: push to main
-        run: git push origin HEAD:main
