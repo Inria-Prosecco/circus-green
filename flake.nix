@@ -1,13 +1,14 @@
 {
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.follows = "eurydice/nixpkgs";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     charon = {
       url = "github:aeneasverif/charon";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     eurydice = {
       url = "github:aeneasverif/eurydice";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.charon.follows = "charon";
     };
     fstar.follows = "eurydice/fstar";

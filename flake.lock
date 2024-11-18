@@ -130,8 +130,6 @@
         "fstar": "fstar",
         "karamel": "karamel",
         "nixpkgs": [
-          "eurydice",
-          "karamel",
           "nixpkgs"
         ]
       },
@@ -485,6 +483,21 @@
         "type": "indirect"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1731676054,
+        "narHash": "sha256-OZiZ3m8SCMfh3B6bfGC/Bm4x3qc1m2SVEAlkV6iY7Yg=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5e4fbfb6b3de1aa2872b76d49fafc942626e2add",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
     "root": {
       "inputs": {
         "bertie": "bertie",
@@ -501,10 +514,7 @@
           "karamel"
         ],
         "libcrux": "libcrux",
-        "nixpkgs": [
-          "eurydice",
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs_3"
       }
     },
     "rust-by-examples": {
