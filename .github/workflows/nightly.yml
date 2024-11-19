@@ -126,15 +126,10 @@ jobs:
           RESULTS: ${{ toJSON(needs) }}
         run: |
           echo "$RESULTS" > results.json
-          nix shell nixpkgs#jq --command ./message.sh | tee message.txt
-          {
-            echo 'MSG<<EOF'
-            cat message.txt
-            echo EOF
-          } >> "$GITHUB_ENV"
+          nix shell nixpkgs#jq --command ./message.sh | tee "$GITHUB_ENV"
 
       - name: push to main
-        if: ${{ github.event_name == 'schedule' }}
+        if: ${{ env.SUCCESS == '1' && github.event_name == 'schedule' }}
         run: git push origin HEAD:main
 
       - name: send zulip info message

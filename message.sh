@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
+echo 'MSG<<EOF'
 echo "*Nightly update*"
 if [[ "$(jq 'map(.result == "success") | all' results.json)" == "true" ]]; then
+    SUCCESS=1
     echo '✅✅✅'
 else
+    SUCCESS=0
     echo '❌❌❌'
 fi
 echo ""
@@ -34,3 +37,6 @@ cat flake.lock good.lock | jq -s -r '
     | "\(.[1].rev[0:8])..\(.[0].rev[0:8])" as $range
     | "\(.[0].repo): [\($range)](https://github.com/\(.[0].owner)/\(.[0].repo)/compare/\($range))"
     '
+echo EOF
+
+echo "SUCCESS=$SUCCESS"
