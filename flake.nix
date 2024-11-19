@@ -1,36 +1,26 @@
 {
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "nixpkgs/nixos-unstable";
     charon = {
       url = "github:aeneasverif/charon";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "eurydice/nixpkgs";
     };
     eurydice = {
       url = "github:aeneasverif/eurydice";
-      inputs.nixpkgs.follows = "nixpkgs";
       inputs.charon.follows = "charon";
     };
-    fstar.follows = "eurydice/fstar";
-    karamel.follows = "eurydice/karamel";
-    hax = {
-      url = "github:hacspec/hax";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.fstar.follows = "fstar";
-    };
+    hax.url = "github:hacspec/hax";
     libcrux = {
       url = "github:cryspen/libcrux";
       inputs.charon.follows = "charon";
       inputs.eurydice.follows = "eurydice";
-      inputs.fstar.follows = "fstar";
-      inputs.karamel.follows = "karamel";
+      inputs.fstar.follows = "eurydice/fstar";
+      inputs.karamel.follows = "eurydice/karamel";
       inputs.hax.follows = "hax";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     bertie = {
       url = "github:cryspen/bertie";
       inputs.hax.follows = "hax";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
