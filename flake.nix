@@ -3,8 +3,10 @@
   # take good care to avoid duplicated inputs to save on evaluation time.
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-utils.follows = "fstar/flake-utils";
     crane.url = "github:ipetkov/crane";
+    fstar.follows = "eurydice/fstar";
+    karamel.follows = "eurydice/karamel";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,14 +20,14 @@
     };
     eurydice = {
       url = "github:aeneasverif/eurydice";
-      # If we override this, we would need to override karamel's nixpkgs too to get compatible ocaml versions.
-      # But flakes don't support nested overrides.
+      # If we override this, we would need to override karamel's nixpkgs too to
+      # get compatible ocaml versions, but flakes don't support nested
+      # overrides. We also can't use eurydice's nixpkgs because it doesn not
+      # contain `mold-wrapped` which is required by libcrux.
       # inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
       inputs.charon.follows = "charon";
     };
-    fstar.follows = "eurydice/fstar";
-    karamel.follows = "eurydice/karamel";
     hax = {
       url = "github:hacspec/hax";
       inputs.nixpkgs.follows = "nixpkgs";
