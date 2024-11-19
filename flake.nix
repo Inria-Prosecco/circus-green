@@ -4,6 +4,7 @@
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:nixos/nixpkgs";
+    crane.url = "github:ipetkov/crane";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,6 +13,7 @@
       url = "github:aeneasverif/charon";
       inputs.nixpkgs.follows = "eurydice/nixpkgs";
       inputs.rust-overlay.follows = "rust-overlay";
+      inputs.crane.follows = "crane";
     };
     eurydice = {
       url = "github:aeneasverif/eurydice";
@@ -27,10 +29,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.rust-overlay.follows = "rust-overlay";
       inputs.fstar.follows = "fstar";
+      inputs.crane.follows = "crane";
     };
     libcrux = {
       url = "github:cryspen/libcrux";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.crane.follows = "crane";
       inputs.charon.follows = "charon";
       inputs.eurydice.follows = "eurydice";
       inputs.fstar.follows = "fstar";
@@ -40,7 +44,7 @@
     bertie = {
       url = "github:cryspen/bertie";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.rust-overlay.follows = "rust-overlay";
+      inputs.crane.follows = "crane";
       inputs.hax.follows = "hax";
     };
   };
