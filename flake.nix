@@ -27,12 +27,16 @@
   outputs =
     inputs:
     inputs.flake-utils.lib.eachDefaultSystem (system: {
-      packages = {
+      packages = rec {
         hax = inputs.hax.packages.${system}.hax;
         charon = inputs.charon.packages.${system}.default;
         eurydice = inputs.eurydice.packages.${system}.default;
         ml-kem = inputs.libcrux.packages.${system}.ml-kem.override {
           cargoLock = ./libcrux-Cargo.lock;
+        };
+        ml-kem-small = ml-kem.override {
+          checkHax = false;
+          runBenchmarks = false;
         };
         bertie = inputs.bertie.packages.${system}.default;
         inherit inputs;
