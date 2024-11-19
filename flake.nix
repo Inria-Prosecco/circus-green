@@ -2,8 +2,8 @@
   # The inputs we care about are: hax, charon, eurydice, libcrux, bertie. We
   # take good care to avoid duplicated inputs to save on evaluation time.
   inputs = {
-    flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:nixos/nixpkgs";
+    flake-utils.url = "github:numtide/flake-utils";
     crane.url = "github:ipetkov/crane";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
@@ -12,6 +12,7 @@
     charon = {
       url = "github:aeneasverif/charon";
       inputs.nixpkgs.follows = "eurydice/nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
       inputs.rust-overlay.follows = "rust-overlay";
       inputs.crane.follows = "crane";
     };
@@ -20,6 +21,7 @@
       # If we override this, we would need to override karamel's nixpkgs too to get compatible ocaml versions.
       # But flakes don't support nested overrides.
       # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
       inputs.charon.follows = "charon";
     };
     fstar.follows = "eurydice/fstar";
@@ -27,6 +29,7 @@
     hax = {
       url = "github:hacspec/hax";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
       inputs.rust-overlay.follows = "rust-overlay";
       inputs.fstar.follows = "fstar";
       inputs.crane.follows = "crane";
@@ -34,6 +37,7 @@
     libcrux = {
       url = "github:cryspen/libcrux";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
       inputs.crane.follows = "crane";
       inputs.charon.follows = "charon";
       inputs.eurydice.follows = "eurydice";
@@ -44,6 +48,7 @@
     bertie = {
       url = "github:cryspen/bertie";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
       inputs.crane.follows = "crane";
       inputs.hax.follows = "hax";
     };
