@@ -1,25 +1,46 @@
 {
+  # The inputs we care about are: hax, charon, eurydice, libcrux, bertie. We
+  # take good care to avoid duplicated inputs to save on evaluation time.
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:nixos/nixpkgs";
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     charon = {
       url = "github:aeneasverif/charon";
       inputs.nixpkgs.follows = "eurydice/nixpkgs";
+      inputs.rust-overlay.follows = "rust-overlay";
     };
     eurydice = {
       url = "github:aeneasverif/eurydice";
+      # If we override this, we would need to override karamel's nixpkgs too to get compatible ocaml versions.
+      # But flakes don't support nested overrides.
+      # inputs.nixpkgs.follows = "nixpkgs";
       inputs.charon.follows = "charon";
     };
-    hax.url = "github:hacspec/hax";
+    fstar.follows = "eurydice/fstar";
+    karamel.follows = "eurydice/karamel";
+    hax = {
+      url = "github:hacspec/hax";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.rust-overlay.follows = "rust-overlay";
+      inputs.fstar.follows = "fstar";
+    };
     libcrux = {
       url = "github:cryspen/libcrux";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.charon.follows = "charon";
       inputs.eurydice.follows = "eurydice";
-      inputs.fstar.follows = "eurydice/fstar";
-      inputs.karamel.follows = "eurydice/karamel";
+      inputs.fstar.follows = "fstar";
+      inputs.karamel.follows = "karamel";
       inputs.hax.follows = "hax";
     };
     bertie = {
       url = "github:cryspen/bertie";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.rust-overlay.follows = "rust-overlay";
       inputs.hax.follows = "hax";
     };
   };
