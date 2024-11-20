@@ -3,6 +3,14 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
     inputs:
+      fstar:
+        description: "Fstar"
+        type: "string"
+        default: "master"
+      karamel:
+        description: "KaRaMeL"
+        type: "string"
+        default: "master"
       hax:
         description: "Hax"
         type: "string"

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+FSTAR_BRANCH="${FSTAR_BRANCH:-master}"
+KARAMEL_BRANCH="${KARAMEL_BRANCH:-master}"
 HAX_BRANCH="${HAX_BRANCH:-main}"
 CHARON_BRANCH="${CHARON_BRANCH:-main}"
 EURYDICE_BRANCH="${EURYDICE_BRANCH:-main}"
@@ -11,6 +13,8 @@ nix flake update \
    --override-input hax "github:hacspec/hax?ref=$HAX_BRANCH" \
    --override-input charon "github:aeneasverif/charon?ref=$CHARON_BRANCH" \
    --override-input eurydice "github:aeneasverif/eurydice?ref=$EURYDICE_BRANCH" \
+   --override-input eurydice/fstar "github:FStarLang/fstar?ref=$FSTAR_BRANCH" \
+   --override-input eurydice/karamel "github:FStarLang/karamel?ref=$KARAMEL_BRANCH" \
    --override-input libcrux "github:cryspen/libcrux?ref=$LIBCRUX_BRANCH" \
    --override-input bertie "github:cryspen/bertie?ref=$BERTIE_BRANCH"
 
