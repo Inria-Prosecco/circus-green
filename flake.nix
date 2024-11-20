@@ -56,22 +56,28 @@
     };
   };
 
-  outputs =
-    inputs:
-    inputs.flake-utils.lib.eachDefaultSystem (system: {
-      packages = rec {
+  outputs = inputs:
+    inputs.flake-utils.lib.eachDefaultSystem (system: rec {
+      packages = {
         hax = inputs.hax.packages.${system}.hax;
         charon = inputs.charon.packages.${system}.default;
         eurydice = inputs.eurydice.packages.${system}.default;
         ml-kem = inputs.libcrux.packages.${system}.ml-kem.override {
           cargoLock = ./libcrux-Cargo.lock;
         };
+        bertie = inputs.bertie.packages.${system}.default;
+        inherit inputs;
+      };
+      checks = rec {
+        hax = inputs.hax.checks.${system}.toolchain;
+        charon = inputs.charon.checks.${system}.charon-ml-tests;
+        eurydice = inputs.eurydice.checks.${system}.default;
+        ml-kem = packages.ml-kem;
         ml-kem-small = ml-kem.override {
           checkHax = false;
           runBenchmarks = false;
         };
-        bertie = inputs.bertie.packages.${system}.default;
-        inherit inputs;
+        bertie = packages.bertie;
       };
     });
 }
