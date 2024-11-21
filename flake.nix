@@ -22,8 +22,8 @@
       url = "github:aeneasverif/eurydice";
       # If we override this, we would need to override karamel's nixpkgs too to
       # get compatible ocaml versions, but flakes don't support nested
-      # overrides. We also can't use eurydice's nixpkgs because it doesn not
-      # contain `mold-wrapped` which is required by libcrux.
+      # overrides. We also can't use eurydice's nixpkgs everywhere because it
+      # does not contain `mold-wrapped` which is required by libcrux.
       # inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
       inputs.charon.follows = "charon";
