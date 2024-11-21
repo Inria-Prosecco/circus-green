@@ -5,8 +5,8 @@
     nixpkgs.url = "github:nixos/nixpkgs";
     flake-utils.follows = "fstar/flake-utils";
     crane.url = "github:ipetkov/crane";
-    fstar.follows = "eurydice/fstar";
     karamel.follows = "eurydice/karamel";
+    fstar.follows = "eurydice/karamel/fstar";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
