@@ -708,7 +708,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/?branch=main#7bb4c2856fd10ab665feaea1d7eb3b8d432d5af6"
+source = "git+https://github.com/hacspec/hax/?branch=main#af46dd63a71583c558484c2c43d0734b936db36a"
 dependencies = [
  "hax-lib-macros 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/?branch=main)",
  "num-bigint",
@@ -718,7 +718,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/#7bb4c2856fd10ab665feaea1d7eb3b8d432d5af6"
+source = "git+https://github.com/hacspec/hax/#af46dd63a71583c558484c2c43d0734b936db36a"
 dependencies = [
  "hax-lib-macros 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/)",
  "num-bigint",
@@ -728,7 +728,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/?branch=main#7bb4c2856fd10ab665feaea1d7eb3b8d432d5af6"
+source = "git+https://github.com/hacspec/hax/?branch=main#af46dd63a71583c558484c2c43d0734b936db36a"
 dependencies = [
  "hax-lib-macros-types 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/?branch=main)",
  "paste",
@@ -741,7 +741,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/#7bb4c2856fd10ab665feaea1d7eb3b8d432d5af6"
+source = "git+https://github.com/hacspec/hax/#af46dd63a71583c558484c2c43d0734b936db36a"
 dependencies = [
  "hax-lib-macros-types 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/)",
  "paste",
@@ -754,7 +754,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/?branch=main#7bb4c2856fd10ab665feaea1d7eb3b8d432d5af6"
+source = "git+https://github.com/hacspec/hax/?branch=main#af46dd63a71583c558484c2c43d0734b936db36a"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -766,7 +766,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/#7bb4c2856fd10ab665feaea1d7eb3b8d432d5af6"
+source = "git+https://github.com/hacspec/hax/#af46dd63a71583c558484c2c43d0734b936db36a"
 dependencies = [
  "proc-macro2",
  "quote",
