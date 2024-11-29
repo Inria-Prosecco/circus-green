@@ -609,12 +609,12 @@ dependencies = [
 
 [[package]]
 name = "errno"
-version = "0.3.9"
+version = "0.3.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "534c5cf6194dfab3db3242765c03bbe257cf92f22b38f6bc0c58d59108a820ba"
+checksum = "33d852cb9b869c2a9b3df2f71a3074817f01e1844f839a144f5fcef059a4eb5d"
 dependencies = [
  "libc",
- "windows-sys 0.52.0",
+ "windows-sys 0.59.0",
 ]
 
 [[package]]
@@ -708,7 +708,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/?branch=main#af46dd63a71583c558484c2c43d0734b936db36a"
+source = "git+https://github.com/hacspec/hax/?branch=main#1c5e17c9ceee5adede0f4ea7f68bb3d8337f33a0"
 dependencies = [
  "hax-lib-macros 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/?branch=main)",
  "num-bigint",
@@ -718,7 +718,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/#af46dd63a71583c558484c2c43d0734b936db36a"
+source = "git+https://github.com/hacspec/hax/#1c5e17c9ceee5adede0f4ea7f68bb3d8337f33a0"
 dependencies = [
  "hax-lib-macros 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/)",
  "num-bigint",
@@ -728,7 +728,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/?branch=main#af46dd63a71583c558484c2c43d0734b936db36a"
+source = "git+https://github.com/hacspec/hax/?branch=main#1c5e17c9ceee5adede0f4ea7f68bb3d8337f33a0"
 dependencies = [
  "hax-lib-macros-types 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/?branch=main)",
  "paste",
@@ -741,7 +741,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/#af46dd63a71583c558484c2c43d0734b936db36a"
+source = "git+https://github.com/hacspec/hax/#1c5e17c9ceee5adede0f4ea7f68bb3d8337f33a0"
 dependencies = [
  "hax-lib-macros-types 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/)",
  "paste",
@@ -754,7 +754,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/?branch=main#af46dd63a71583c558484c2c43d0734b936db36a"
+source = "git+https://github.com/hacspec/hax/?branch=main#1c5e17c9ceee5adede0f4ea7f68bb3d8337f33a0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -766,7 +766,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/#af46dd63a71583c558484c2c43d0734b936db36a"
+source = "git+https://github.com/hacspec/hax/#1c5e17c9ceee5adede0f4ea7f68bb3d8337f33a0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1424,9 +1424,9 @@ dependencies = [
 
 [[package]]
 name = "pqcrypto-internals"
-version = "0.2.6"
+version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e10cdd9eee50fe65bbd4f40211f1a492f1ee52e97a51100950b6f1fa319ab7cd"
+checksum = "62cd8ebf02b43967cda06e6a3f54d0bd9659459c3003d16aeedd07b44c6db06c"
 dependencies = [
  "cc",
  "dunce",
