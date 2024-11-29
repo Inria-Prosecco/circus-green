@@ -4,6 +4,7 @@ FSTAR_BRANCH="${FSTAR_BRANCH:-master}"
 KARAMEL_BRANCH="${KARAMEL_BRANCH:-master}"
 HAX_BRANCH="${HAX_BRANCH:-main}"
 CHARON_BRANCH="${CHARON_BRANCH:-main}"
+AENEAS_BRANCH="${AENEAS_BRANCH:-main}"
 EURYDICE_BRANCH="${EURYDICE_BRANCH:-main}"
 LIBCRUX_BRANCH="${LIBCRUX_BRANCH:-main}"
 BERTIE_BRANCH="${BERTE_BRANCH:-main}"
@@ -12,6 +13,7 @@ BERTIE_BRANCH="${BERTE_BRANCH:-main}"
 nix flake update \
    --override-input hax "github:hacspec/hax?ref=$HAX_BRANCH" \
    --override-input charon "github:aeneasverif/charon?ref=$CHARON_BRANCH" \
+   --override-input aeneas "github:aeneasverif/aeneas?ref=$AENEAS_BRANCH" \
    --override-input eurydice "github:aeneasverif/eurydice?ref=$EURYDICE_BRANCH" \
    --override-input eurydice/karamel "github:FStarLang/karamel?ref=$KARAMEL_BRANCH" \
    --override-input eurydice/karamel/fstar "github:FStarLang/fstar?ref=$FSTAR_BRANCH" \
