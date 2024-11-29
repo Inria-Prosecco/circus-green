@@ -18,6 +18,12 @@
       inputs.rust-overlay.follows = "rust-overlay";
       inputs.crane.follows = "crane";
     };
+    aeneas = {
+      url = "github:aeneasverif/aeneas";
+      inputs.nixpkgs.follows = "eurydice/nixpkgs";
+      inputs.charon.follows = "charon";
+      inputs.fstar.follows = "fstar";
+    };
     eurydice = {
       url = "github:aeneasverif/eurydice";
       # If we override this, we would need to override karamel's nixpkgs too to
@@ -61,6 +67,7 @@
       packages = {
         hax = inputs.hax.packages.${system}.hax;
         charon = inputs.charon.packages.${system}.default;
+        aeneas = inputs.aeneas.packages.${system}.default;
         eurydice = inputs.eurydice.packages.${system}.default;
         ml-kem = inputs.libcrux.packages.${system}.ml-kem.override {
           cargoLock = ./libcrux-Cargo.lock;
@@ -71,6 +78,7 @@
       checks = rec {
         hax = inputs.hax.checks.${system}.toolchain;
         charon = inputs.charon.checks.${system}.charon-ml-tests;
+        aeneas = inputs.aeneas.checks.${system}.default;
         eurydice = inputs.eurydice.checks.${system}.default;
         ml-kem = packages.ml-kem;
         ml-kem-small = ml-kem.override {

@@ -23,6 +23,10 @@ on:
         description: "Eurydice"
         type: "string"
         default: "main"
+      aeneas:
+        description: "Aeneas"
+        type: "string"
+        default: "main"
       libcrux:
         description: "Libcrux"
         type: "string"
@@ -51,6 +55,7 @@ jobs:
         env:
           HAX_BRANCH: ${{ inputs.hax }}
           CHARON_BRANCH: ${{ inputs.charon }}
+          AENEAS_BRANCH: ${{ inputs.aeneas }}
           EURYDICE_BRANCH: ${{ inputs.eurydice }}
           LIBCRUX_BRANCH: ${{ inputs.libcrux }}
           BERTIE_BRANCH: ${{ inputs.bertie }}
@@ -87,6 +92,16 @@ jobs:
           ref: nightly
       - run: ./check.sh charon
 
+  aeneas:
+    needs: update-flake
+    runs-on: [self-hosted, linux, nix]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: nightly
+      - run: ./check.sh aeneas
+
   eurydice:
     needs: update-flake
     runs-on: [self-hosted, linux, nix]
@@ -118,7 +133,7 @@ jobs:
       - run: ./check.sh bertie
 
   process_results:
-    needs: [hax, charon, eurydice, ml-kem, bertie]
+    needs: [hax, charon, aeneas, eurydice, ml-kem, bertie]
     runs-on: [self-hosted, linux, nix]
     if: ${{ success() || failure() }} # Will always run unless canceled
     steps:
