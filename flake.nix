@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
     flake-utils.follows = "fstar/flake-utils";
-    crane.url = "github:ipetkov/crane";
+    crane.url = "github:ipetkov/crane/da87d1af7e4e09fd0271432340a5cadf3eb96005";
     karamel.follows = "eurydice/karamel";
     fstar.follows = "eurydice/karamel/fstar";
     rust-overlay = {
