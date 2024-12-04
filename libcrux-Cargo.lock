@@ -290,9 +290,9 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.5.21"
+version = "4.5.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fb3b4b9e5a7c7514dfa52869339ee98b3156b0bfb4e8a77c4ff4babb64b1604f"
+checksum = "69371e34337c4c984bbe322360c2547210bf632eb2814bbe78a6e87a2935bd2b"
 dependencies = [
  "clap_builder",
  "clap_derive",
@@ -300,9 +300,9 @@ dependencies = [
 
 [[package]]
 name = "clap_builder"
-version = "4.5.21"
+version = "4.5.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b17a95aa67cc7b5ebd32aa5370189aa0d79069ef1c64ce893bd30fb24bff20ec"
+checksum = "6e24c1b4099818523236a8ca881d2b45db98dadfb4625cf6608c12069fcbbde1"
 dependencies = [
  "anstream",
  "anstyle",
@@ -697,30 +697,30 @@ dependencies = [
 
 [[package]]
 name = "hax-lib"
-version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/?branch=main#102ae9fdc955abb853d6e2aa8acaf9c0f50d5947"
+version = "0.1.0-rc.1"
+source = "git+https://github.com/hacspec/hax/?branch=main#de59826b832befc82905286d052c8a961c31f3cd"
 dependencies = [
- "hax-lib-macros 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/?branch=main)",
+ "hax-lib-macros 0.1.0-rc.1 (git+https://github.com/hacspec/hax/?branch=main)",
  "num-bigint",
  "num-traits",
 ]
 
 [[package]]
 name = "hax-lib"
-version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/#102ae9fdc955abb853d6e2aa8acaf9c0f50d5947"
+version = "0.1.0-rc.1"
+source = "git+https://github.com/hacspec/hax/#de59826b832befc82905286d052c8a961c31f3cd"
 dependencies = [
- "hax-lib-macros 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/)",
+ "hax-lib-macros 0.1.0-rc.1 (git+https://github.com/hacspec/hax/)",
  "num-bigint",
  "num-traits",
 ]
 
 [[package]]
 name = "hax-lib-macros"
-version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/?branch=main#102ae9fdc955abb853d6e2aa8acaf9c0f50d5947"
+version = "0.1.0-rc.1"
+source = "git+https://github.com/hacspec/hax/?branch=main#de59826b832befc82905286d052c8a961c31f3cd"
 dependencies = [
- "hax-lib-macros-types 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/?branch=main)",
+ "hax-lib-macros-types 0.1.0-rc.1 (git+https://github.com/hacspec/hax/?branch=main)",
  "paste",
  "proc-macro-error",
  "proc-macro2",
@@ -730,10 +730,10 @@ dependencies = [
 
 [[package]]
 name = "hax-lib-macros"
-version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/#102ae9fdc955abb853d6e2aa8acaf9c0f50d5947"
+version = "0.1.0-rc.1"
+source = "git+https://github.com/hacspec/hax/#de59826b832befc82905286d052c8a961c31f3cd"
 dependencies = [
- "hax-lib-macros-types 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/)",
+ "hax-lib-macros-types 0.1.0-rc.1 (git+https://github.com/hacspec/hax/)",
  "paste",
  "proc-macro-error",
  "proc-macro2",
@@ -743,8 +743,8 @@ dependencies = [
 
 [[package]]
 name = "hax-lib-macros-types"
-version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/?branch=main#102ae9fdc955abb853d6e2aa8acaf9c0f50d5947"
+version = "0.1.0-rc.1"
+source = "git+https://github.com/hacspec/hax/?branch=main#de59826b832befc82905286d052c8a961c31f3cd"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -755,8 +755,8 @@ dependencies = [
 
 [[package]]
 name = "hax-lib-macros-types"
-version = "0.1.0-alpha.1"
-source = "git+https://github.com/hacspec/hax/#102ae9fdc955abb853d6e2aa8acaf9c0f50d5947"
+version = "0.1.0-rc.1"
+source = "git+https://github.com/hacspec/hax/#de59826b832befc82905286d052c8a961c31f3cd"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -931,8 +931,8 @@ version = "0.0.2-beta.2"
 dependencies = [
  "clap",
  "getrandom",
- "hax-lib 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/?branch=main)",
- "hax-lib-macros 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/?branch=main)",
+ "hax-lib 0.1.0-rc.1 (git+https://github.com/hacspec/hax/?branch=main)",
+ "hax-lib-macros 0.1.0-rc.1 (git+https://github.com/hacspec/hax/?branch=main)",
  "hex",
  "libcrux",
  "libcrux-ecdh",
@@ -1060,7 +1060,7 @@ name = "libcrux-ml-dsa"
 version = "0.0.2-beta.2"
 dependencies = [
  "criterion",
- "hax-lib 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/)",
+ "hax-lib 0.1.0-rc.1 (git+https://github.com/hacspec/hax/)",
  "hex",
  "libcrux-intrinsics",
  "libcrux-platform",
@@ -1076,7 +1076,7 @@ name = "libcrux-ml-kem"
 version = "0.0.2-beta.2"
 dependencies = [
  "criterion",
- "hax-lib 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/)",
+ "hax-lib 0.1.0-rc.1 (git+https://github.com/hacspec/hax/)",
  "hex",
  "libcrux-intrinsics",
  "libcrux-platform",
@@ -1139,7 +1139,7 @@ version = "0.0.2-beta.2"
 dependencies = [
  "cavp",
  "criterion",
- "hax-lib 0.1.0-alpha.1 (git+https://github.com/hacspec/hax/)",
+ "hax-lib 0.1.0-rc.1 (git+https://github.com/hacspec/hax/)",
  "hex",
  "libcrux-intrinsics",
  "libcrux-platform",
