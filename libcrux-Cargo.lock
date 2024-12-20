@@ -890,12 +890,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "libcrux-chacha20poly1305"
+version = "0.0.2-beta.2"
+dependencies = [
+ "hex",
+ "libcrux-hacl-rs",
+ "libcrux-macros",
+ "libcrux-poly1305",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "libcrux-curve25519"
 version = "0.0.2-beta.2"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
- "libcrux-sha2",
 ]
 
 [[package]]
@@ -1035,6 +1046,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "libcrux-poly1305"
+version = "0.0.2-beta.2"
+dependencies = [
+ "libcrux-hacl-rs",
+ "libcrux-macros",
+]
+
+[[package]]
 name = "libcrux-pqclean"
 version = "0.0.2-beta.2"
 dependencies = [
@@ -1055,6 +1074,16 @@ dependencies = [
  "libcrux-hmac",
  "libcrux-kem",
  "rand",
+]
+
+[[package]]
+name = "libcrux-rsa"
+version = "0.0.2-beta.2"
+dependencies = [
+ "libcrux-hacl-rs",
+ "libcrux-macros",
+ "libcrux-sha2",
+ "libcrux-traits",
 ]
 
 [[package]]
