@@ -685,7 +685,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.1.0-rc.1"
-source = "git+https://github.com/hacspec/hax/#f47b2ae440333850f9990c59f7200e79802b64f5"
+source = "git+https://github.com/hacspec/hax/#4d7cbffc1258aaf68782cfc3784661eb912deda3"
 dependencies = [
  "hax-lib-macros",
  "num-bigint",
@@ -695,7 +695,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.1.0-rc.1"
-source = "git+https://github.com/hacspec/hax/#f47b2ae440333850f9990c59f7200e79802b64f5"
+source = "git+https://github.com/hacspec/hax/#4d7cbffc1258aaf68782cfc3784661eb912deda3"
 dependencies = [
  "hax-lib-macros-types",
  "paste",
@@ -708,7 +708,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.1.0-rc.1"
-source = "git+https://github.com/hacspec/hax/#f47b2ae440333850f9990c59f7200e79802b64f5"
+source = "git+https://github.com/hacspec/hax/#4d7cbffc1258aaf68782cfc3784661eb912deda3"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1675,9 +1675,9 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.134"
+version = "1.0.135"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d00f4175c42ee48b15416f6193a959ba3a0d67fc699a0db9ad12df9f83991c7d"
+checksum = "2b0d7ba2887406110130a978386c4e1befb98c674b4fba677954e4db976630d9"
 dependencies = [
  "itoa",
  "memchr",
