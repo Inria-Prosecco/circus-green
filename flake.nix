@@ -8,7 +8,7 @@
     karamel.follows = "eurydice/karamel";
     fstar.follows = "eurydice/karamel/fstar";
     rust-overlay = {
-      url = "github:oxalica/rust-overlay";
+      url = "github:oxalica/rust-overlay/de30cc5963da22e9742bbbbb9a3344570ed237b9";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     charon = {
