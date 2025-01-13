@@ -7,8 +7,8 @@ nix flake update \
    --override-input charon "github:aeneasverif/charon" \
    --override-input aeneas "github:aeneasverif/aeneas" \
    --override-input eurydice "github:aeneasverif/eurydice" \
-   --override-input eurydice/karamel "github:FStarLang/karamel" \
-   --override-input eurydice/karamel/fstar "github:FStarLang/fstar" \
+   --override-input karamel "github:FStarLang/karamel" \
+   --override-input karamel/fstar "github:FStarLang/fstar" \
    --override-input libcrux "github:cryspen/libcrux" \
    --override-input bertie "github:cryspen/bertie"
 

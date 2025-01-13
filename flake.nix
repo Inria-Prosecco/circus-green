@@ -5,34 +5,34 @@
     nixpkgs.url = "github:nixos/nixpkgs";
     flake-utils.follows = "fstar/flake-utils";
     crane.url = "github:ipetkov/crane/da87d1af7e4e09fd0271432340a5cadf3eb96005";
-    karamel.follows = "eurydice/karamel";
-    fstar.follows = "eurydice/karamel/fstar";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    karamel = {
+      url = "github:FStarLang/karamel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    fstar.follows = "karamel/fstar";
     charon = {
       url = "github:aeneasverif/charon";
-      inputs.nixpkgs.follows = "eurydice/nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
       inputs.rust-overlay.follows = "rust-overlay";
       inputs.crane.follows = "crane";
     };
     aeneas = {
       url = "github:aeneasverif/aeneas";
-      inputs.nixpkgs.follows = "eurydice/nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.charon.follows = "charon";
       inputs.fstar.follows = "fstar";
     };
     eurydice = {
       url = "github:aeneasverif/eurydice";
-      # If we override this, we would need to override karamel's nixpkgs too to
-      # get compatible ocaml versions, but flakes don't support nested
-      # overrides. We also can't use eurydice's nixpkgs everywhere because it
-      # does not contain `mold-wrapped` which is required by libcrux.
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
       inputs.charon.follows = "charon";
+      inputs.karamel.follows = "karamel";
     };
     hax = {
       url = "github:hacspec/hax";
