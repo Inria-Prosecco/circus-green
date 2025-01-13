@@ -14,8 +14,7 @@
           "fstar"
         ],
         "nixpkgs": [
-          "eurydice",
-          "nixpkgs"
+          "nixpkgs-ocaml"
         ]
       },
       "locked": {
@@ -70,12 +69,10 @@
           "flake-utils"
         ],
         "nixpkgs": [
-          "eurydice",
           "nixpkgs"
         ],
         "nixpkgs-ocaml": [
-          "charon",
-          "nixpkgs"
+          "nixpkgs-ocaml"
         ],
         "rust-overlay": [
           "rust-overlay"
@@ -125,7 +122,9 @@
           "karamel",
           "nixpkgs"
         ],
-        "recent_nixpkgs": "recent_nixpkgs"
+        "recent_nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1736548395,
@@ -328,22 +327,6 @@
         "type": "github"
       }
     },
-    "recent_nixpkgs": {
-      "locked": {
-        "lastModified": 1735563628,
-        "narHash": "sha256-OnSAY7XDSx7CtDoqNh8jwVwh4xNL/2HaJxGjryLWzX8=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "b134951a4c9f3c995fd7be05f3243f8ecd65d798",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "aeneas": "aeneas",
@@ -367,6 +350,10 @@
         ],
         "libcrux": "libcrux",
         "nixpkgs": "nixpkgs_2",
+        "nixpkgs-ocaml": [
+          "eurydice",
+          "nixpkgs"
+        ],
         "rust-overlay": "rust-overlay"
       }
     },
