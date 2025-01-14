@@ -14,8 +14,7 @@
           "fstar"
         ],
         "nixpkgs": [
-          "eurydice",
-          "nixpkgs"
+          "nixpkgs-ocaml"
         ]
       },
       "locked": {
@@ -66,24 +65,25 @@
         "crane": [
           "crane"
         ],
-        "flake-compat": "flake-compat",
         "flake-utils": [
           "flake-utils"
         ],
         "nixpkgs": [
-          "eurydice",
           "nixpkgs"
+        ],
+        "nixpkgs-ocaml": [
+          "nixpkgs-ocaml"
         ],
         "rust-overlay": [
           "rust-overlay"
         ]
       },
       "locked": {
-        "lastModified": 1736369122,
-        "narHash": "sha256-LKddoHMQKNJBzeY4c3zQUy+bNCgjlBdKfs7TghpQodI=",
+        "lastModified": 1736782668,
+        "narHash": "sha256-s2bUC/GDEjawaQCh/GE955uehSi/ACdT+1z2CMqIRow=",
         "owner": "aeneasverif",
         "repo": "charon",
-        "rev": "df3b7fd4c1277827c92b4a2cb84347f1f54d92a6",
+        "rev": "1c628d8a9704ee3ab0b9289c73b84848c508d26d",
         "type": "github"
       },
       "original": {
@@ -122,7 +122,9 @@
           "karamel",
           "nixpkgs"
         ],
-        "recent_nixpkgs": "recent_nixpkgs"
+        "recent_nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1736548395,
@@ -135,21 +137,6 @@
       "original": {
         "owner": "aeneasverif",
         "repo": "eurydice",
-        "type": "github"
-      }
-    },
-    "flake-compat": {
-      "locked": {
-        "lastModified": 1717312683,
-        "narHash": "sha256-FrlieJH50AuvagamEvWMIE6D2OAnERuDboFDYAED/dE=",
-        "owner": "nix-community",
-        "repo": "flake-compat",
-        "rev": "38fd3954cf65ce6faf3d0d45cd26059e059f07ea",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "flake-compat",
         "type": "github"
       }
     },
@@ -340,22 +327,6 @@
         "type": "github"
       }
     },
-    "recent_nixpkgs": {
-      "locked": {
-        "lastModified": 1735563628,
-        "narHash": "sha256-OnSAY7XDSx7CtDoqNh8jwVwh4xNL/2HaJxGjryLWzX8=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "b134951a4c9f3c995fd7be05f3243f8ecd65d798",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "aeneas": "aeneas",
@@ -379,6 +350,10 @@
         ],
         "libcrux": "libcrux",
         "nixpkgs": "nixpkgs_2",
+        "nixpkgs-ocaml": [
+          "eurydice",
+          "nixpkgs"
+        ],
         "rust-overlay": "rust-overlay"
       }
     },
