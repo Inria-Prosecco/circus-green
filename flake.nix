@@ -70,7 +70,7 @@
         ml-kem = inputs.libcrux.packages.${system}.ml-kem.override {
           cargoLock = ./libcrux-Cargo.lock;
         };
-        bertie = inputs.bertie.packages.${system}.default;
+        bertie = inputs.bertie.packages.${system}.default ./bertie-Cargo.lock;
         inherit inputs;
       };
       checks = rec {
