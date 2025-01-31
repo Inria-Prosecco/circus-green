@@ -74,9 +74,7 @@
         "nixpkgs-ocaml": [
           "nixpkgs-ocaml"
         ],
-        "rust-overlay": [
-          "rust-overlay"
-        ]
+        "rust-overlay": "rust-overlay"
       },
       "locked": {
         "lastModified": 1737765178,
@@ -354,7 +352,10 @@
           "eurydice",
           "nixpkgs"
         ],
-        "rust-overlay": "rust-overlay"
+        "rust-overlay": [
+          "charon",
+          "rust-overlay"
+        ]
       }
     },
     "rust-by-examples": {
@@ -376,20 +377,22 @@
     "rust-overlay": {
       "inputs": {
         "nixpkgs": [
+          "charon",
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1738117527,
-        "narHash": "sha256-GFviGfaezjGLFUlxdv3zyC7rSZvTXqwcG/YsF6MDkOw=",
+        "lastModified": 1737340068,
+        "narHash": "sha256-5UciRckNV+YOZ6y6ASBIb01cySB12whDxgFUK+EqT8g=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "6a3dc6ce4132bd57359214d986db376f2333c14d",
+        "rev": "275c824ed9e90e7fd4f96d187bde3670062e721f",
         "type": "github"
       },
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "rev": "275c824ed9e90e7fd4f96d187bde3670062e721f",
         "type": "github"
       }
     },

@@ -8,16 +8,12 @@
     crane.url = "github:ipetkov/crane/da87d1af7e4e09fd0271432340a5cadf3eb96005";
     karamel.follows = "eurydice/karamel";
     fstar.follows = "eurydice/karamel/fstar";
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    rust-overlay.follows = "charon/rust-overlay";
     charon = {
       url = "github:aeneasverif/charon";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-ocaml.follows = "nixpkgs-ocaml";
       inputs.flake-utils.follows = "flake-utils";
-      inputs.rust-overlay.follows = "rust-overlay";
       inputs.crane.follows = "crane";
     };
     aeneas = {
