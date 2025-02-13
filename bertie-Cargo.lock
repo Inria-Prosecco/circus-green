@@ -525,7 +525,7 @@ checksum = "b5aba8db14291edd000dfcc4d620c7ebfb122c613afb886ca8803fa4e128a20a"
 [[package]]
 name = "libcrux"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "hax-lib",
  "libcrux-ecdh",
@@ -545,7 +545,7 @@ dependencies = [
 [[package]]
 name = "libcrux-curve25519"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -554,7 +554,7 @@ dependencies = [
 [[package]]
 name = "libcrux-ecdh"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "libcrux-curve25519",
  "libcrux-p256",
@@ -564,7 +564,7 @@ dependencies = [
 [[package]]
 name = "libcrux-ed25519"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -574,7 +574,7 @@ dependencies = [
 [[package]]
 name = "libcrux-hacl"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "cc",
  "libcrux-platform",
@@ -583,7 +583,7 @@ dependencies = [
 [[package]]
 name = "libcrux-hacl-rs"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "libcrux-macros",
 ]
@@ -591,7 +591,7 @@ dependencies = [
 [[package]]
 name = "libcrux-hkdf"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-hmac",
@@ -600,7 +600,7 @@ dependencies = [
 [[package]]
 name = "libcrux-hmac"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -610,7 +610,7 @@ dependencies = [
 [[package]]
 name = "libcrux-intrinsics"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "hax-lib",
 ]
@@ -618,7 +618,7 @@ dependencies = [
 [[package]]
 name = "libcrux-kem"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "libcrux-ecdh",
  "libcrux-ml-kem",
@@ -629,7 +629,7 @@ dependencies = [
 [[package]]
 name = "libcrux-macros"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "quote",
  "syn 2.0.98",
@@ -638,7 +638,7 @@ dependencies = [
 [[package]]
 name = "libcrux-ml-kem"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "hax-lib",
  "libcrux-intrinsics",
@@ -650,7 +650,7 @@ dependencies = [
 [[package]]
 name = "libcrux-p256"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -660,7 +660,7 @@ dependencies = [
 [[package]]
 name = "libcrux-platform"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "libc",
 ]
@@ -668,7 +668,7 @@ dependencies = [
 [[package]]
 name = "libcrux-sha2"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -678,7 +678,7 @@ dependencies = [
 [[package]]
 name = "libcrux-sha3"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 dependencies = [
  "hax-lib",
  "libcrux-intrinsics",
@@ -688,7 +688,7 @@ dependencies = [
 [[package]]
 name = "libcrux-traits"
 version = "0.0.2-beta.2"
-source = "git+https://github.com/cryspen/libcrux#cc29351b5f2732e2bcf7dcb4a776d53ca5be3d21"
+source = "git+https://github.com/cryspen/libcrux#742939dddae733ac11297f99dfafbfdad70439bc"
 
 [[package]]
 name = "lock_api"
