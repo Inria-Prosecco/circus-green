@@ -675,7 +675,7 @@ dependencies = [
 [[package]]
 name = "libcrux-platform"
 version = "0.0.2-beta.3"
-source = "git+https://github.com/cryspen/libcrux#bb0cb25c7f153f3b18915de15d2176603ff44dca"
+source = "git+https://github.com/cryspen/libcrux#44ee5e713a2790e63694bc545fd0754d0917b4c0"
 dependencies = [
  "libc",
 ]
