@@ -734,7 +734,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.1.0"
-source = "git+https://github.com/hacspec/hax/#72a2a92a62c684b53e301043414f981802918bb7"
+source = "git+https://github.com/hacspec/hax/#15578ee02735d800a88038767d62118a93dd6d47"
 dependencies = [
  "hax-lib-macros",
  "num-bigint",
@@ -744,7 +744,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.1.0"
-source = "git+https://github.com/hacspec/hax/#72a2a92a62c684b53e301043414f981802918bb7"
+source = "git+https://github.com/hacspec/hax/#15578ee02735d800a88038767d62118a93dd6d47"
 dependencies = [
  "hax-lib-macros-types",
  "paste",
@@ -757,7 +757,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.1.0"
-source = "git+https://github.com/hacspec/hax/#72a2a92a62c684b53e301043414f981802918bb7"
+source = "git+https://github.com/hacspec/hax/#15578ee02735d800a88038767d62118a93dd6d47"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1008,6 +1008,8 @@ dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
  "libcrux-sha2",
+ "rand 0.9.0",
+ "rand_core 0.9.2",
  "wycheproof",
 ]
 
@@ -1071,6 +1073,7 @@ dependencies = [
  "libcrux-kem",
  "libcrux-ml-kem",
  "libcrux-sha3",
+ "libcrux-traits",
  "rand 0.9.0",
 ]
 
@@ -1159,6 +1162,7 @@ dependencies = [
 name = "libcrux-psq"
 version = "0.0.2-beta.3"
 dependencies = [
+ "clap",
  "classic-mceliece-rust",
  "criterion",
  "libcrux",
@@ -1167,7 +1171,10 @@ dependencies = [
  "libcrux-hkdf",
  "libcrux-hmac",
  "libcrux-kem",
+ "libcrux-psq",
  "libcrux-traits",
+ "log",
+ "pretty_env_logger",
  "rand 0.8.5",
  "rand 0.9.0",
 ]
@@ -1505,9 +1512,9 @@ dependencies = [
 
 [[package]]
 name = "pqcrypto-internals"
-version = "0.2.8"
+version = "0.2.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9cc3518d9ec325ec95d89749d4f5c111776b97c5bbd26e3ffe523aa300f1e27e"
+checksum = "4ad4cd1b8413da8217c3bcb04b10fa728faa9bd77067e8314ca5d363ca0a37d4"
 dependencies = [
  "cc",
  "dunce",
@@ -2038,9 +2045,9 @@ checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 
 [[package]]
 name = "uuid"
-version = "1.14.0"
+version = "1.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "93d59ca99a559661b96bf898d8fce28ed87935fd2bea9f05983c1464dd6c71b1"
+checksum = "e0f540e3240398cce6128b64ba83fdbdd86129c16a3aa1a3a252efd66eb3d587"
 dependencies = [
  "getrandom 0.3.1",
 ]
