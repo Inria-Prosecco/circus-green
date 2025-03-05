@@ -340,9 +340,9 @@ checksum = "f46ad14479a25103f283c0f10005961cf086d8dc42205bb44c46ac563475dca6"
 
 [[package]]
 name = "classic-mceliece-rust"
-version = "2.0.2"
+version = "3.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "45ce62f72a15a9071f83c5084bdf0af4e8cbf31431e79eb4a5509a2f7fe7fe5d"
+checksum = "62a9b6d27e553269a76625911aa8cf6afaa8659f1b0c85b410cb5f51a87183d9"
 dependencies = [
  "rand 0.8.5",
  "sha3",
@@ -734,7 +734,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.1.0"
-source = "git+https://github.com/hacspec/hax/#c54a4eb9b52f4b48cb6c53b67362e7ae2b059a40"
+source = "git+https://github.com/hacspec/hax/#2ea62d9a1cb9c30bc37465aca5c5c5def8148a35"
 dependencies = [
  "hax-lib-macros",
  "num-bigint",
@@ -744,7 +744,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.1.0"
-source = "git+https://github.com/hacspec/hax/#c54a4eb9b52f4b48cb6c53b67362e7ae2b059a40"
+source = "git+https://github.com/hacspec/hax/#2ea62d9a1cb9c30bc37465aca5c5c5def8148a35"
 dependencies = [
  "hax-lib-macros-types",
  "paste",
@@ -757,7 +757,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.1.0"
-source = "git+https://github.com/hacspec/hax/#c54a4eb9b52f4b48cb6c53b67362e7ae2b059a40"
+source = "git+https://github.com/hacspec/hax/#2ea62d9a1cb9c30bc37465aca5c5c5def8148a35"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1165,7 +1165,7 @@ dependencies = [
  "clap",
  "classic-mceliece-rust",
  "criterion",
- "libcrux",
+ "libcrux-chacha20poly1305",
  "libcrux-ecdh",
  "libcrux-ed25519",
  "libcrux-hkdf",
@@ -1268,6 +1268,13 @@ name = "memchr"
 version = "2.7.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "78ca9ab1a0babb1e7d5695e3530886289c18cf2f87ec19a575a0abdce112e3a3"
+
+[[package]]
+name = "minicore"
+version = "0.0.0"
+dependencies = [
+ "rand 0.9.0",
+]
 
 [[package]]
 name = "minicov"

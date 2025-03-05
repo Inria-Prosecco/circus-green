@@ -405,7 +405,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.1.0"
-source = "git+https://github.com/hacspec/hax#c54a4eb9b52f4b48cb6c53b67362e7ae2b059a40"
+source = "git+https://github.com/hacspec/hax#2ea62d9a1cb9c30bc37465aca5c5c5def8148a35"
 dependencies = [
  "hax-lib-macros",
  "num-bigint",
@@ -415,7 +415,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.1.0"
-source = "git+https://github.com/hacspec/hax#c54a4eb9b52f4b48cb6c53b67362e7ae2b059a40"
+source = "git+https://github.com/hacspec/hax#2ea62d9a1cb9c30bc37465aca5c5c5def8148a35"
 dependencies = [
  "hax-lib-macros-types",
  "paste",
@@ -428,7 +428,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.1.0"
-source = "git+https://github.com/hacspec/hax#c54a4eb9b52f4b48cb6c53b67362e7ae2b059a40"
+source = "git+https://github.com/hacspec/hax#2ea62d9a1cb9c30bc37465aca5c5c5def8148a35"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -675,7 +675,7 @@ dependencies = [
 [[package]]
 name = "libcrux-platform"
 version = "0.0.2-beta.3"
-source = "git+https://github.com/cryspen/libcrux#048a5ce17084bc8e26228056acdb439758a36f7e"
+source = "git+https://github.com/cryspen/libcrux#57322fd64053fa64a03af964ef73290c252c7d75"
 dependencies = [
  "libc",
 ]
