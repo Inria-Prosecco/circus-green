@@ -81,5 +81,16 @@
         };
         bertie = packages.bertie;
       };
+      # Make a dev-shell with an appropriate rust toolchain, used to regenerate
+      # the `Cargo.lock`s.
+      devShells.default =
+        let
+          pkgs = import inputs.nixpkgs { inherit system; };
+          rustToolchain = inputs.charon.packages.${system}.rustToolchain;
+          craneLib = (inputs.crane.mkLib pkgs).overrideToolchain rustToolchain;
+        in
+        craneLib.devShell {
+          packages = [ pkgs.jq ];
+        };
     });
 }

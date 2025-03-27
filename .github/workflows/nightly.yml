@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: update
-        run: nix shell nixpkgs#jq --command ./update.sh
+        run: nix develop --command ./update.sh
 
       # Commit the update onto a new branch
       - name: commit
