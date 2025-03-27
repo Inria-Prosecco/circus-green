@@ -21,7 +21,7 @@ function generate_cargo_lock() {
    git clone "https://github.com/$OWNER/$REPO" tmp
    cd tmp
    git checkout "$COMMIT"
-   nix develop --command cargo generate-lockfile
+   cargo generate-lockfile
    cd ..
    mv tmp/Cargo.lock "$PROJECT"-Cargo.lock
    rm -rf tmp
