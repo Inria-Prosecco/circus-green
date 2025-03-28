@@ -40,11 +40,7 @@
       url = "github:cryspen/libcrux";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
-      inputs.crane.follows = "crane";
-      inputs.charon.follows = "charon";
       inputs.eurydice.follows = "eurydice";
-      inputs.fstar.follows = "fstar";
-      inputs.karamel.follows = "karamel";
       inputs.hax.follows = "hax";
     };
     bertie = {
@@ -66,6 +62,9 @@
         ml-kem = inputs.libcrux.packages.${system}.ml-kem.override {
           cargoLock = ./libcrux-Cargo.lock;
         };
+        ml-dsa = inputs.libcrux.packages.${system}.ml-dsa.override {
+          cargoLock = ./libcrux-Cargo.lock;
+        };
         bertie = inputs.bertie.packages.${system}.default ./bertie-Cargo.lock;
         inherit inputs;
       };
@@ -78,6 +77,10 @@
         ml-kem-small = ml-kem.override {
           checkHax = false;
           runBenchmarks = false;
+        };
+        ml-dsa = packages.ml-dsa;
+        ml-dsa-small = ml-dsa.override {
+          checkHax = false;
         };
         bertie = packages.bertie;
       };
