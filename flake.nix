@@ -2,29 +2,30 @@
   # The inputs we care about are: hax, charon, eurydice, libcrux, bertie. We
   # take good care to avoid duplicated inputs to save on evaluation time.
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs"; # Recent nixpkgs for rust-overlay
-    nixpkgs-ocaml.follows = "eurydice/nixpkgs"; # eurydice nixpkgs for ocaml compat
+    nixpkgs.url = "github:nixos/nixpkgs";
     flake-utils.follows = "fstar/flake-utils";
     crane.url = "github:ipetkov/crane/da87d1af7e4e09fd0271432340a5cadf3eb96005";
     karamel.follows = "eurydice/karamel";
+    karamel.inputs.nixpkgs.follows = "nixpkgs";
     fstar.follows = "eurydice/karamel/fstar";
+    fstar.inputs.nixpkgs.follows = "nixpkgs";
     rust-overlay.follows = "charon/rust-overlay";
     charon = {
       url = "github:aeneasverif/charon";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nixpkgs-ocaml.follows = "nixpkgs-ocaml";
+      inputs.nixpkgs-ocaml.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
       inputs.crane.follows = "crane";
     };
     aeneas = {
       url = "github:aeneasverif/aeneas";
-      inputs.nixpkgs.follows = "nixpkgs-ocaml";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.charon.follows = "charon";
       inputs.fstar.follows = "fstar";
     };
     eurydice = {
       url = "github:aeneasverif/eurydice";
-      inputs.recent_nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
       inputs.charon.follows = "charon";
     };
