@@ -41,11 +41,7 @@
       url = "github:cryspen/libcrux";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
-      inputs.crane.follows = "crane";
-      inputs.charon.follows = "charon";
       inputs.eurydice.follows = "eurydice";
-      inputs.fstar.follows = "fstar";
-      inputs.karamel.follows = "karamel";
       inputs.hax.follows = "hax";
     };
     bertie = {
