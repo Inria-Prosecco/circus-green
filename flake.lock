@@ -14,15 +14,15 @@
           "fstar"
         ],
         "nixpkgs": [
-          "nixpkgs-ocaml"
+          "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1743241654,
-        "narHash": "sha256-TDhrbgbLkCE+dpVqMJ7yuJZwBYo4BLd05cUEmn555ls=",
+        "lastModified": 1743890786,
+        "narHash": "sha256-Ddrk08Xcx6R1sPPzXDKoDBFdxBD5D7BET+jTybJOn1Y=",
         "owner": "aeneasverif",
         "repo": "aeneas",
-        "rev": "8448ccd388bddfec12fb31d4bf61d7541728bceb",
+        "rev": "aa99e3397e879ce46aacc2d706b8874566a7b3d5",
         "type": "github"
       },
       "original": {
@@ -73,16 +73,16 @@
           "nixpkgs"
         ],
         "nixpkgs-ocaml": [
-          "nixpkgs-ocaml"
+          "nixpkgs"
         ],
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1743424578,
-        "narHash": "sha256-W81SjPxzMoMqcU25A7iYHJRLJhLdTv5dlfl2zX0oeFI=",
+        "lastModified": 1743952850,
+        "narHash": "sha256-wBwa+tWm0MZCs2avXRV1qpO4vw2WDvu8A7QAn7CaaQM=",
         "owner": "aeneasverif",
         "repo": "charon",
-        "rev": "294988ac5efd84aede2c06667f23e69d01aa1281",
+        "rev": "bba1aa4cae0326f1d94d466f8263e85dd9f14efe",
         "type": "github"
       },
       "original": {
@@ -117,20 +117,15 @@
         ],
         "karamel": "karamel",
         "nixpkgs": [
-          "eurydice",
-          "karamel",
-          "nixpkgs"
-        ],
-        "recent_nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1743162870,
-        "narHash": "sha256-1dI5C0jsMZjgu8EpVBKafeL0or90TMkRhwg0c3rLbHs=",
+        "lastModified": 1743586238,
+        "narHash": "sha256-BxJVtO2yu9gEgXiyEZk6/OPQg/6MRR5s/RU1QBaOWRQ=",
         "owner": "aeneasverif",
         "repo": "eurydice",
-        "rev": "9c587e76b6724c4a4e887b4443327c5680544288",
+        "rev": "9f45c5b6710ac03aa157299391233be90bc1565c",
         "type": "github"
       },
       "original": {
@@ -251,8 +246,6 @@
         "fstar": "fstar",
         "nixpkgs": [
           "eurydice",
-          "karamel",
-          "fstar",
           "nixpkgs"
         ]
       },
@@ -328,11 +321,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1743470143,
-        "narHash": "sha256-MkEMgX65cculZKy7jjkWS+dQCO6bT/h2dvEmkBAxNCA=",
+        "lastModified": 1743588408,
+        "narHash": "sha256-WRZyK13yucGjwNBMOGjU8ljRJ8FYFv8MBru/bXqZUn0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "84a380590bf7e989c1de604467e289bc9d750ed1",
+        "rev": "88efe689298b1863db0310c0a22b3ebb4d04fbc3",
         "type": "github"
       },
       "original": {
@@ -364,10 +357,6 @@
         ],
         "libcrux": "libcrux",
         "nixpkgs": "nixpkgs_2",
-        "nixpkgs-ocaml": [
-          "eurydice",
-          "nixpkgs"
-        ],
         "rust-overlay": [
           "charon",
           "rust-overlay"
