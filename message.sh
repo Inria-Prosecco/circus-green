@@ -18,7 +18,7 @@ echo "run: https://github.com/inria-prosecco/circus-green/actions/runs/$RUN"
 echo ""
 
 echo "*Statuses:*"
-for project in hax charon aeneas eurydice ml-kem bertie; do
+for project in hax charon aeneas eurydice ml-kem ml-dsa bertie; do
     status="$(jq -r 'if .["'"$project"'"].result == "success" then "✅" else "❌" end' results.json)"
     echo "$status $project (main)"
 done
