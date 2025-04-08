@@ -2,7 +2,9 @@
 
 # Update `flake.lock`. `nix flake update` doesn't suffice because that won't
 # force-update nested dependencies like karamel.
+# We list the inputs to avoid updating nixpkgs too.
 nix flake update \
+   hax charon aeneas eurydice libcrux bertie \
    --override-input hax "github:hacspec/hax" \
    --override-input charon "github:aeneasverif/charon" \
    --override-input aeneas "github:aeneasverif/aeneas" \
