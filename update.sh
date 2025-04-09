@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# Update `flake.lock`. `nix flake update` doesn't suffice because that won't
-# force-update nested dependencies like karamel.
+# Update `flake.lock`. Also force-update karamel and fstar.
 # We list the inputs to avoid updating nixpkgs too.
 nix flake update \
    hax charon aeneas eurydice libcrux bertie \
