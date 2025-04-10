@@ -391,7 +391,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax#76e29082ea2a62ed4a27a332c179507b65d355d7"
+source = "git+https://github.com/cryspen/hax#f5dabd610b74af0f1056411f9d66cfd57510e407"
 dependencies = [
  "hax-lib-macros",
  "num-bigint",
@@ -401,10 +401,9 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax#76e29082ea2a62ed4a27a332c179507b65d355d7"
+source = "git+https://github.com/cryspen/hax#f5dabd610b74af0f1056411f9d66cfd57510e407"
 dependencies = [
  "hax-lib-macros-types",
- "paste",
  "proc-macro-error2",
  "proc-macro2",
  "quote",
@@ -414,7 +413,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax#76e29082ea2a62ed4a27a332c179507b65d355d7"
+source = "git+https://github.com/cryspen/hax#f5dabd610b74af0f1056411f9d66cfd57510e407"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -813,12 +812,6 @@ dependencies = [
  "smallvec",
  "windows-targets",
 ]
-
-[[package]]
-name = "paste"
-version = "1.0.15"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 
 [[package]]
 name = "pin-project-lite"
