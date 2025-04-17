@@ -734,7 +734,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax/#89a84ec2793512301f7522d01431be6444a55cad"
+source = "git+https://github.com/cryspen/hax/#8a05ecc3c535e92739dc03526839362e557009b9"
 dependencies = [
  "hax-lib-macros",
  "num-bigint",
@@ -744,7 +744,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax/#89a84ec2793512301f7522d01431be6444a55cad"
+source = "git+https://github.com/cryspen/hax/#8a05ecc3c535e92739dc03526839362e557009b9"
 dependencies = [
  "hax-lib-macros-types",
  "proc-macro-error2",
@@ -756,7 +756,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax/#89a84ec2793512301f7522d01431be6444a55cad"
+source = "git+https://github.com/cryspen/hax/#8a05ecc3c535e92739dc03526839362e557009b9"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -978,7 +978,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ecdh"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "hex",
  "libcrux-curve25519",
@@ -992,7 +992,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ecdsa"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "libcrux-p256",
  "libcrux-sha2",
@@ -1003,7 +1003,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ed25519"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1042,7 +1042,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-hkdf"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-hmac",
@@ -1050,7 +1050,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-hmac"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1066,7 +1066,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-kem"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "hex",
  "libcrux-ecdh",
@@ -1104,7 +1104,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ml-kem"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "criterion",
  "hax-lib",
@@ -1127,7 +1127,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-p256"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1160,7 +1160,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-psq"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "clap",
  "classic-mceliece-rust",
@@ -1181,7 +1181,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-rsa"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1192,7 +1192,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-sha2"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "hex",
  "libcrux-hacl-rs",
@@ -1223,7 +1223,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-traits"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "rand 0.9.0",
 ]
@@ -1622,9 +1622,9 @@ dependencies = [
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.94"
+version = "1.0.95"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a31971752e70b8b2686d7e46ec17fb38dad4051d94024c88df49b667caea9c84"
+checksum = "02b3e5e68a3a1a02aad3ec490a98007cbc13c37cbe84a3cd7b8e406d76e7f778"
 dependencies = [
  "unicode-ident",
 ]
