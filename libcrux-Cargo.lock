@@ -125,7 +125,7 @@ dependencies = [
  "p256",
  "pkcs1",
  "pqcrypto-kyber",
- "rand 0.9.0",
+ "rand 0.9.1",
  "rand_core 0.6.4",
  "rand_core 0.9.3",
  "ring",
@@ -734,7 +734,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax/#8a05ecc3c535e92739dc03526839362e557009b9"
+source = "git+https://github.com/cryspen/hax/#da017c2af136f53919b0cf926f3f016de1fa302e"
 dependencies = [
  "hax-lib-macros",
  "num-bigint",
@@ -744,7 +744,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax/#8a05ecc3c535e92739dc03526839362e557009b9"
+source = "git+https://github.com/cryspen/hax/#da017c2af136f53919b0cf926f3f016de1fa302e"
 dependencies = [
  "hax-lib-macros-types",
  "proc-macro-error2",
@@ -756,7 +756,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax/#8a05ecc3c535e92739dc03526839362e557009b9"
+source = "git+https://github.com/cryspen/hax/#da017c2af136f53919b0cf926f3f016de1fa302e"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -938,7 +938,7 @@ dependencies = [
  "pretty_env_logger",
  "quickcheck",
  "quickcheck_macros",
- "rand 0.9.0",
+ "rand 0.9.1",
  "rand_core 0.9.3",
  "serde",
  "serde_json",
@@ -984,7 +984,7 @@ dependencies = [
  "libcrux-curve25519",
  "libcrux-p256",
  "pretty_env_logger",
- "rand 0.9.0",
+ "rand 0.9.1",
  "rand_core 0.9.3",
  "serde",
  "serde_json",
@@ -996,7 +996,7 @@ version = "0.0.3-alpha.1"
 dependencies = [
  "libcrux-p256",
  "libcrux-sha2",
- "rand 0.9.0",
+ "rand 0.9.1",
  "serde",
  "serde_json",
 ]
@@ -1008,7 +1008,7 @@ dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
  "libcrux-sha2",
- "rand 0.9.0",
+ "rand 0.9.1",
  "rand_core 0.9.3",
  "wycheproof",
 ]
@@ -1019,7 +1019,7 @@ version = "0.0.0"
 dependencies = [
  "libcrux",
  "libfuzzer-sys",
- "rand 0.9.0",
+ "rand 0.9.1",
 ]
 
 [[package]]
@@ -1074,7 +1074,7 @@ dependencies = [
  "libcrux-ml-kem",
  "libcrux-sha3",
  "libcrux-traits",
- "rand 0.9.0",
+ "rand 0.9.1",
 ]
 
 [[package]]
@@ -1097,7 +1097,7 @@ dependencies = [
  "libcrux-platform",
  "libcrux-sha3",
  "pqcrypto-mldsa",
- "rand 0.9.0",
+ "rand 0.9.1",
  "serde",
  "serde_json",
 ]
@@ -1112,7 +1112,7 @@ dependencies = [
  "libcrux-intrinsics",
  "libcrux-platform",
  "libcrux-sha3",
- "rand 0.9.0",
+ "rand 0.9.1",
  "serde",
  "serde_json",
 ]
@@ -1176,7 +1176,7 @@ dependencies = [
  "log",
  "pretty_env_logger",
  "rand 0.8.5",
- "rand 0.9.0",
+ "rand 0.9.1",
 ]
 
 [[package]]
@@ -1211,7 +1211,7 @@ dependencies = [
  "libcrux-intrinsics",
  "libcrux-platform",
  "pretty_env_logger",
- "rand 0.9.0",
+ "rand 0.9.1",
 ]
 
 [[package]]
@@ -1225,7 +1225,7 @@ dependencies = [
 name = "libcrux-traits"
 version = "0.0.3-alpha.1"
 dependencies = [
- "rand 0.9.0",
+ "rand 0.9.1",
 ]
 
 [[package]]
@@ -1280,7 +1280,7 @@ checksum = "78ca9ab1a0babb1e7d5695e3530886289c18cf2f87ec19a575a0abdce112e3a3"
 name = "minicore"
 version = "0.0.0"
 dependencies = [
- "rand 0.9.0",
+ "rand 0.9.1",
 ]
 
 [[package]]
@@ -1679,13 +1679,12 @@ dependencies = [
 
 [[package]]
 name = "rand"
-version = "0.9.0"
+version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3779b94aeb87e8bd4e834cee3650289ee9e0d5677f976ecdb6d219e5f4f6cd94"
+checksum = "9fbfd9d094a40bf3ae768db9361049ace4c0e04a4fd6b359518bd7b73a73dd97"
 dependencies = [
  "rand_chacha 0.9.0",
  "rand_core 0.9.3",
- "zerocopy",
 ]
 
 [[package]]
