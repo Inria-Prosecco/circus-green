@@ -683,9 +683,9 @@ dependencies = [
 
 [[package]]
 name = "getrandom"
-version = "0.2.15"
+version = "0.2.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c4567c8db10ae91089c99af84c68c38da3ec2f087c3f82960bcdbf3656b6f4d7"
+checksum = "335ff9f135e4384c8150d6f27c6daed433577f86b4750418338c01a1a2528592"
 dependencies = [
  "cfg-if",
  "libc",
@@ -734,7 +734,7 @@ dependencies = [
 [[package]]
 name = "hax-lib"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax/#da017c2af136f53919b0cf926f3f016de1fa302e"
+source = "git+https://github.com/cryspen/hax/#fb795c3c6e35b10f78eceab0a263a68bb768eeef"
 dependencies = [
  "hax-lib-macros",
  "num-bigint",
@@ -744,7 +744,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax/#da017c2af136f53919b0cf926f3f016de1fa302e"
+source = "git+https://github.com/cryspen/hax/#fb795c3c6e35b10f78eceab0a263a68bb768eeef"
 dependencies = [
  "hax-lib-macros-types",
  "proc-macro-error2",
@@ -756,7 +756,7 @@ dependencies = [
 [[package]]
 name = "hax-lib-macros-types"
 version = "0.2.0"
-source = "git+https://github.com/cryspen/hax/#da017c2af136f53919b0cf926f3f016de1fa302e"
+source = "git+https://github.com/cryspen/hax/#fb795c3c6e35b10f78eceab0a263a68bb768eeef"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1260,9 +1260,9 @@ dependencies = [
 
 [[package]]
 name = "libm"
-version = "0.2.11"
+version = "0.2.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8355be11b20d696c8f18f6cc018c4e372165b1fa8126cef092399c9951984ffa"
+checksum = "c9627da5196e5d8ed0b0495e61e518847578da83483c37288316d9b2e03a7f72"
 
 [[package]]
 name = "log"
@@ -1532,7 +1532,7 @@ checksum = "5f408e9e302fffe05f781c95777cb36bbfc51daccf518c28c5829d49a989df22"
 dependencies = [
  "cc",
  "dunce",
- "getrandom 0.2.15",
+ "getrandom 0.2.16",
  "libc",
 ]
 
@@ -1713,7 +1713,7 @@ version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 dependencies = [
- "getrandom 0.2.15",
+ "getrandom 0.2.16",
 ]
 
 [[package]]
@@ -1792,7 +1792,7 @@ checksum = "a4689e6c2294d81e88dc6261c768b63bc4fcdb852be6d1352498b114f61383b7"
 dependencies = [
  "cc",
  "cfg-if",
- "getrandom 0.2.15",
+ "getrandom 0.2.16",
  "libc",
  "untrusted",
  "windows-sys 0.52.0",
