@@ -9,10 +9,9 @@ nix flake update \
    --override-input aeneas "github:aeneasverif/aeneas" \
    --override-input eurydice "github:aeneasverif/eurydice" \
    --override-input eurydice/karamel "github:FStarLang/karamel" \
+   --override-input eurydice/karamel/fstar "github:FStarLang/fstar" \
    --override-input libcrux "github:cryspen/libcrux" \
    --override-input bertie "github:cryspen/bertie"
-# Don't upgrade fstar for now, it causes ocaml package issues
-   # --override-input eurydice/karamel/fstar "github:FStarLang/fstar" \
 
 # Generates a `Cargo.lock` for the given project.
 function generate_cargo_lock() {
