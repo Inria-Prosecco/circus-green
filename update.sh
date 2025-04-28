@@ -20,9 +20,11 @@ function generate_cargo_lock() {
    OWNER="$(jq -r .nodes."$PROJECT".locked.owner flake.lock)"
    REPO="$(jq -r .nodes."$PROJECT".locked.repo flake.lock)"
    git clone "https://github.com/$OWNER/$REPO" tmp
+   cp "$PROJECT"-Cargo.lock tmp/Cargo.lock
    cd tmp
    git checkout "$COMMIT"
-   cargo generate-lockfile
+   # Ensure the lockfile is up-to-date without updating deps unnecessarily
+   cargo metadata > /dev/null
    cd ..
    mv tmp/Cargo.lock "$PROJECT"-Cargo.lock
    rm -rf tmp
