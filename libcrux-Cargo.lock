@@ -362,6 +362,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2459377285ad874054d797f3ccebf984978aa39129f6eafde5cdc8315b612f8"
 
 [[package]]
+name = "core-models"
+version = "0.0.2"
+dependencies = [
+ "hax-lib",
+ "rand 0.9.1",
+]
+
+[[package]]
 name = "cpufeatures"
 version = "0.2.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1063,8 +1071,8 @@ dependencies = [
 name = "libcrux-intrinsics"
 version = "0.0.2"
 dependencies = [
+ "core-models",
  "hax-lib",
- "minicore",
 ]
 
 [[package]]
@@ -1092,6 +1100,7 @@ dependencies = [
 name = "libcrux-ml-dsa"
 version = "0.0.2"
 dependencies = [
+ "core-models",
  "criterion",
  "hax-lib",
  "hex",
@@ -1099,7 +1108,6 @@ dependencies = [
  "libcrux-macros",
  "libcrux-platform",
  "libcrux-sha3",
- "minicore",
  "pqcrypto-mldsa",
  "rand 0.9.1",
  "serde",
@@ -1279,14 +1287,6 @@ name = "memchr"
 version = "2.7.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "78ca9ab1a0babb1e7d5695e3530886289c18cf2f87ec19a575a0abdce112e3a3"
-
-[[package]]
-name = "minicore"
-version = "0.0.2"
-dependencies = [
- "hax-lib",
- "rand 0.9.1",
-]
 
 [[package]]
 name = "minicov"
