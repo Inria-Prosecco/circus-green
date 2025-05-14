@@ -1123,6 +1123,7 @@ dependencies = [
  "hex",
  "libcrux-intrinsics",
  "libcrux-platform",
+ "libcrux-secrets",
  "libcrux-sha3",
  "rand 0.9.1",
  "serde",
@@ -1200,6 +1201,14 @@ dependencies = [
  "libcrux-sha2",
  "libcrux-traits",
  "wycheproof",
+]
+
+[[package]]
+name = "libcrux-secrets"
+version = "0.0.2"
+dependencies = [
+ "criterion",
+ "hax-lib",
 ]
 
 [[package]]
