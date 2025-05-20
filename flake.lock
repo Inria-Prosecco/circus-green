@@ -216,11 +216,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1747380925,
-        "narHash": "sha256-Ppj65FqvTYcXTdxVXqZPYB/oV8KdDkbrn4I970TjKzs=",
+        "lastModified": 1747658347,
+        "narHash": "sha256-AUuFUhJAl6eSvmyYh9onsFLc7jUj5Eqht9D1aGEvIIY=",
         "owner": "hacspec",
         "repo": "hax",
-        "rev": "d128c022328d913b693c26bdcdf591f0a8c263df",
+        "rev": "27ba29ff727fb4c4fffecad5e736181087ce2537",
         "type": "github"
       },
       "original": {
@@ -273,11 +273,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1747468746,
-        "narHash": "sha256-548U9gmTrUxpWNPZRkh56JLhAJKNZFE2IYmBg6XgaT4=",
+        "lastModified": 1747665001,
+        "narHash": "sha256-hIveZ887/ycZgwyJ4fzTduwtXJzPYW5ZRut19zDf9Rk=",
         "owner": "cryspen",
         "repo": "libcrux",
-        "rev": "46bb724feac4fa1210c625374d91230343a9e256",
+        "rev": "879dc2826c6d8953d1bc4bcf6992f8d449d4a90b",
         "type": "github"
       },
       "original": {
