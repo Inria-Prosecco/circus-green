@@ -124,7 +124,7 @@ dependencies = [
  "bytesize",
  "criterion",
  "dhat",
- "hax-lib 0.2.0 (git+https://github.com/cryspen/hax)",
+ "hax-lib 0.3.0",
  "hex",
  "libcrux-chacha20poly1305",
  "libcrux-ecdsa",
@@ -394,17 +394,17 @@ version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "61933dbb676f11311378720e1ee97a511813edb7044255381ba0d625cac6be7b"
 dependencies = [
- "hax-lib-macros 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hax-lib-macros 0.2.0",
  "num-bigint",
  "num-traits",
 ]
 
 [[package]]
 name = "hax-lib"
-version = "0.2.0"
-source = "git+https://github.com/cryspen/hax#b153ce1e3ed648805871dc501a41988a5ac3bd11"
+version = "0.3.0"
+source = "git+https://github.com/cryspen/hax#27ba29ff727fb4c4fffecad5e736181087ce2537"
 dependencies = [
- "hax-lib-macros 0.2.0 (git+https://github.com/cryspen/hax)",
+ "hax-lib-macros 0.3.0",
  "num-bigint",
  "num-traits",
 ]
@@ -415,7 +415,7 @@ version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7ba3a8d32921c3f535e973f72053d20bc8c7f74028911a269748440952157807"
 dependencies = [
- "hax-lib-macros-types 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hax-lib-macros-types 0.2.0",
  "paste",
  "proc-macro-error",
  "proc-macro2",
@@ -425,10 +425,10 @@ dependencies = [
 
 [[package]]
 name = "hax-lib-macros"
-version = "0.2.0"
-source = "git+https://github.com/cryspen/hax#b153ce1e3ed648805871dc501a41988a5ac3bd11"
+version = "0.3.0"
+source = "git+https://github.com/cryspen/hax#27ba29ff727fb4c4fffecad5e736181087ce2537"
 dependencies = [
- "hax-lib-macros-types 0.2.0 (git+https://github.com/cryspen/hax)",
+ "hax-lib-macros-types 0.3.0",
  "proc-macro-error2",
  "proc-macro2",
  "quote",
@@ -450,8 +450,8 @@ dependencies = [
 
 [[package]]
 name = "hax-lib-macros-types"
-version = "0.2.0"
-source = "git+https://github.com/cryspen/hax#b153ce1e3ed648805871dc501a41988a5ac3bd11"
+version = "0.3.0"
+source = "git+https://github.com/cryspen/hax#27ba29ff727fb4c4fffecad5e736181087ce2537"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -636,7 +636,7 @@ version = "0.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f4f764ef781467a75b92f4df575911f1cdcf77a7beb316d8054a233fed53a7ab"
 dependencies = [
- "hax-lib 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hax-lib 0.2.0",
 ]
 
 [[package]]
@@ -677,7 +677,7 @@ version = "0.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "34075e62474b4531bd02647a59190b9d4982b5ecca5d9775fc3d35dd70d9cff1"
 dependencies = [
- "hax-lib 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hax-lib 0.2.0",
  "libcrux-intrinsics",
  "libcrux-platform 0.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "libcrux-sha3",
@@ -769,7 +769,7 @@ version = "0.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3678ede46c5b5e7d5c0035065f8b9575fb67b6df405a88778ddb89cfb71d8fed"
 dependencies = [
- "hax-lib 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hax-lib 0.2.0",
  "libcrux-intrinsics",
  "libcrux-platform 0.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]

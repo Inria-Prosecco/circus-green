@@ -18,11 +18,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1746665215,
-        "narHash": "sha256-epNVAk7QMwOFW/Jb5VDSn4dcVVgyttt9tzeIdXpUnkQ=",
+        "lastModified": 1747748682,
+        "narHash": "sha256-19XuZq5JNyNB33gjVcpJKIICRKbyHIqLgoHPpBCPjYY=",
         "owner": "aeneasverif",
         "repo": "aeneas",
-        "rev": "88e5db37eae06ec9b052f551376b0879ee0c9bc1",
+        "rev": "a3b4f7f1d4664bf93a01cf2b80cfffeecb7d78bd",
         "type": "github"
       },
       "original": {
@@ -47,11 +47,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1745914264,
-        "narHash": "sha256-Myv/4R2l+h4Y9ILRk1w0cD7X8C3se/P6/xNAY9dQVN0=",
+        "lastModified": 1747728070,
+        "narHash": "sha256-hqJ89qh4eMTDbLB7qH1lYQEfk65lySKzf4rZsMublqE=",
         "owner": "cryspen",
         "repo": "bertie",
-        "rev": "7eb9ec2d99a671e17fa5ed6bf94bb948b9e19698",
+        "rev": "729c13d56e7459742847dcf67395eb4a1eaf12c4",
         "type": "github"
       },
       "original": {
@@ -73,11 +73,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1747150205,
-        "narHash": "sha256-j+0UPeTSmvnMJCcVNUDDdDvMZmC9hhuJ2hE9T16anSQ=",
+        "lastModified": 1747748015,
+        "narHash": "sha256-TkX54a+DD0maQcje2zlpRlNxdhuirFuTKIig6fWCDV0=",
         "owner": "aeneasverif",
         "repo": "charon",
-        "rev": "cbbda54890d043c9ac454cfd7ee1dd38f98cd74a",
+        "rev": "312fbbd5fbabc8f161da7f60d3fa6183d3a2df1d",
         "type": "github"
       },
       "original": {
@@ -115,11 +115,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1747259698,
-        "narHash": "sha256-rH6naId0iosObplIKkY9nGY5Pq805uOVWJlCH0r1Q2c=",
+        "lastModified": 1747746550,
+        "narHash": "sha256-EX0/2WxpihhsS31Hl1Tt6RRCy6k0d/nDMIzJZIJzqXM=",
         "owner": "aeneasverif",
         "repo": "eurydice",
-        "rev": "c539dcbca91759d9d0883f769a217c124dd05fbc",
+        "rev": "e51d4e0bdc5e5dc5943dc9d8122442ead3acb264",
         "type": "github"
       },
       "original": {
@@ -244,11 +244,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1747253824,
-        "narHash": "sha256-xj6u9pNcJ1c4QWg17TIQEVtDmSM/JKd+zTh3doF9/PU=",
+        "lastModified": 1747764588,
+        "narHash": "sha256-Vy5lnGRUPjm+vN6nW3Irr/ILV+gGA6r88p3hoynOv7A=",
         "owner": "FStarLang",
         "repo": "karamel",
-        "rev": "f1837bde2a25b0be80c850340674aa0fb8ff72d7",
+        "rev": "38241dff51919c1bfcc13c392f7a551dd4d2783d",
         "type": "github"
       },
       "original": {
@@ -273,11 +273,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1747665001,
-        "narHash": "sha256-hIveZ887/ycZgwyJ4fzTduwtXJzPYW5ZRut19zDf9Rk=",
+        "lastModified": 1747754592,
+        "narHash": "sha256-EXTBPiuA+EHod5Lzz453p9+j63+57rhMlDg2qRYSaMA=",
         "owner": "cryspen",
         "repo": "libcrux",
-        "rev": "879dc2826c6d8953d1bc4bcf6992f8d449d4a90b",
+        "rev": "87f49c6c5517daebf596903972981b1f3e34fbb1",
         "type": "github"
       },
       "original": {
