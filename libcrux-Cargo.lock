@@ -366,6 +366,7 @@ name = "core-models"
 version = "0.0.2"
 dependencies = [
  "hax-lib",
+ "pastey",
  "rand 0.9.1",
 ]
 
@@ -954,7 +955,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-blake2"
-version = "0.0.3"
+version = "0.0.3-alpha.1"
 dependencies = [
  "criterion",
  "libcrux-hacl-rs",
@@ -964,7 +965,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-chacha20poly1305"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "hex",
  "libcrux-hacl-rs",
@@ -977,7 +978,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-curve25519"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1042,7 +1043,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-hacl-rs"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "libcrux-macros",
 ]
@@ -1087,7 +1088,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-macros"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "quote",
  "syn 2.0.101",
@@ -1095,7 +1096,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ml-dsa"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "core-models",
  "criterion",
@@ -1153,7 +1154,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-poly1305"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1202,7 +1203,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-secrets"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "criterion",
  "hax-lib",
@@ -1234,7 +1235,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-test-utils"
-version = "0.0.2"
+version = "0.0.3-alpha.1"
 dependencies = [
  "libcrux-macros",
 ]
@@ -1450,6 +1451,12 @@ name = "paste"
 version = "1.0.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
+
+[[package]]
+name = "pastey"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b3a8cb46bdc156b1c90460339ae6bfd45ba0394e5effbaa640badb4987fdc261"
 
 [[package]]
 name = "pem-rfc7468"
