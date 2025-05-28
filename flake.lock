@@ -18,16 +18,33 @@
         ]
       },
       "locked": {
-        "lastModified": 1747916746,
-        "narHash": "sha256-B0QEfEQKRYTxf5vkqktK+4I7Ou1PqdtLSrL40/7xmto=",
+        "lastModified": 1748357295,
+        "narHash": "sha256-nwzyPIN4c7sQcFC/FbK+KMp7uhEvTyt5Fak23t+H09Q=",
         "owner": "aeneasverif",
         "repo": "aeneas",
-        "rev": "1d7f36767128b9d639ebf04eadf79042c4ccc3aa",
+        "rev": "a13db6cec26d81b1726473cef724acaffd0be75c",
         "type": "github"
       },
       "original": {
         "owner": "aeneasverif",
         "repo": "aeneas",
+        "type": "github"
+      }
+    },
+    "benchmark": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1716472966,
+        "narHash": "sha256-O+1ZHaNHSkKz3PlKDyI94LqiLtjyrKxjOIi8Q236/MI=",
+        "owner": "google",
+        "repo": "benchmark",
+        "rev": "a4cf155615c63e019ae549e31703bf367df5b471",
+        "type": "github"
+      },
+      "original": {
+        "owner": "google",
+        "ref": "v1.8.4",
+        "repo": "benchmark",
         "type": "github"
       }
     },
@@ -83,6 +100,23 @@
       "original": {
         "owner": "aeneasverif",
         "repo": "charon",
+        "type": "github"
+      }
+    },
+    "circus-green": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1743124428,
+        "narHash": "sha256-XSRu3LH0RhZ+P8zCADl8e+yjghmol/Eb1oTsaI5JWr4=",
+        "owner": "Inria-Prosecco",
+        "repo": "circus-green",
+        "rev": "b18bf804c2a999a2f476e09608284561c964225c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Inria-Prosecco",
+        "repo": "circus-green",
+        "rev": "b18bf804c2a999a2f476e09608284561c964225c",
         "type": "github"
       }
     },
@@ -179,6 +213,23 @@
         "type": "github"
       }
     },
+    "googletest": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1623433346,
+        "narHash": "sha256-SjlJxushfry13RGA7BCjYC9oZqV4z6x8dOiHfl/wpF0=",
+        "owner": "google",
+        "repo": "googletest",
+        "rev": "e2239ee6043f73722e7aa812a459f54a28552929",
+        "type": "github"
+      },
+      "original": {
+        "owner": "google",
+        "ref": "release-1.11.0",
+        "repo": "googletest",
+        "type": "github"
+      }
+    },
     "hacl-star": {
       "flake": false,
       "locked": {
@@ -229,6 +280,23 @@
         "type": "github"
       }
     },
+    "json": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633696761,
+        "narHash": "sha256-EBzwaHyDWF8h/z3Zfq4p/n5Vpz7Ozlc3eoWDKXWv2YY=",
+        "owner": "nlohmann",
+        "repo": "json",
+        "rev": "aa0e847e5b57a00696bdcb6a834b927231b81613",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nlohmann",
+        "ref": "v3.10.3",
+        "repo": "json",
+        "type": "github"
+      }
+    },
     "karamel": {
       "inputs": {
         "flake-utils": [
@@ -244,11 +312,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1747764588,
-        "narHash": "sha256-Vy5lnGRUPjm+vN6nW3Irr/ILV+gGA6r88p3hoynOv7A=",
+        "lastModified": 1748394092,
+        "narHash": "sha256-3oKVxmmZVlmoCpDws4KS952ovK4E49se+HtCmAQmOrc=",
         "owner": "FStarLang",
         "repo": "karamel",
-        "rev": "38241dff51919c1bfcc13c392f7a551dd4d2783d",
+        "rev": "27ad449ff34f44dfc84ca48bb5b77304a39459d9",
         "type": "github"
       },
       "original": {
@@ -259,25 +327,29 @@
     },
     "libcrux": {
       "inputs": {
+        "benchmark": "benchmark",
+        "circus-green": "circus-green",
         "eurydice": [
           "eurydice"
         ],
         "flake-utils": [
           "flake-utils"
         ],
+        "googletest": "googletest",
         "hax": [
           "hax"
         ],
+        "json": "json",
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1748275659,
-        "narHash": "sha256-1tNSHx7LGlAZnERSyXXDKeEw/irN9n7Ru/8mMI2qbjI=",
+        "lastModified": 1748376799,
+        "narHash": "sha256-7ky8k6xTshkUvtWbl9pnQHklEJalmDCORroDUtJWTNg=",
         "owner": "cryspen",
         "repo": "libcrux",
-        "rev": "1dc9d6a5bf93a8a8a1ba4dd83dbc67ebc0275b23",
+        "rev": "feb1e9f6dd85437e64337537cde22ba1991cbb00",
         "type": "github"
       },
       "original": {
