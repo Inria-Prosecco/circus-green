@@ -164,7 +164,7 @@ jobs:
       - run: ./check.sh bertie
 
   process_results:
-    needs: [hax, charon, aeneas, eurydice, ml-kem, ml-dsa, bertie]
+    needs: [hax, charon, aeneas, eurydice, scylla, ml-kem, ml-dsa, bertie]
     runs-on: [self-hosted, linux, nix]
     if: ${{ success() || failure() }} # Will always run unless canceled
     steps:
