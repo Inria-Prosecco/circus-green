@@ -73,7 +73,6 @@ jobs:
       - run: ./check.sh eurydice
 
   scylla:
-    check:
     runs-on: [self-hosted, linux, nix]
     steps:
       - name: Clone scylla
