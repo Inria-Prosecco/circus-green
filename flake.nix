@@ -48,6 +48,12 @@
       inputs.crane.follows = "crane";
       inputs.hax.follows = "hax";
     };
+    scylla = {
+      url = "github:aeneasverif/scylla";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.karamel.follows = "karamel";
+    };
   };
 
   outputs = inputs:
@@ -57,6 +63,7 @@
         charon = inputs.charon.packages.${system}.default;
         aeneas = inputs.aeneas.packages.${system}.default;
         eurydice = inputs.eurydice.packages.${system}.default;
+        scylla = inputs.scylla.devShells.${system}.default;
         ml-kem = inputs.libcrux.packages.${system}.ml-kem.override {
           cargoLock = ./libcrux-Cargo.lock;
         };
