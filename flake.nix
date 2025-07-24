@@ -30,9 +30,9 @@
       url = "github:hacspec/hax";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
-      inputs.rust-overlay.follows = "rust-overlay";
+      # inputs.rust-overlay.follows = "rust-overlay";
       inputs.fstar.follows = "fstar";
-      inputs.crane.follows = "crane";
+      # inputs.crane.follows = "crane";
     };
     libcrux = {
       url = "github:cryspen/libcrux";
