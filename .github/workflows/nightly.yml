@@ -72,6 +72,73 @@ jobs:
           ref: nightly
       - run: ./check.sh eurydice
 
+  scylla:
+    needs: update-flake
+    runs-on: [self-hosted, linux, nix]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          path: circus-green
+          ref: nightly
+
+      - name: Clone scylla
+        uses: actions/checkout@v4
+        with:
+          repository: AeneasVerif/scylla
+          path: scylla
+          ref: main
+
+      - name: Clone symcrypt
+        uses: actions/checkout@v4
+        with:
+          repository: msprotz/SymCrypt
+          path: symcrypt
+          submodules: true
+          ref: protz/scylla
+
+      - name: Clone frodo
+        uses: actions/checkout@v4
+        with:
+          repository: msprotz/PQCrypto-LWEKE
+          path: pqcrypto-lweke
+          submodules: true
+          ref: master
+
+      - name: Clone bzip2
+        uses: actions/checkout@v4
+        with:
+          repository: msprotz/bzip2
+          path: bzip2
+          submodules: true
+          ref: master
+
+      - name: Build symcrypt
+        working-directory: symcrypt
+        run: |
+          nix develop "$GITHUB_WORKSPACE/circus-green#scylla" --command scripts/build.py cmake build --no-fips --no-asm --config Release
+
+      - name: Build and test scylla
+        working-directory: scylla
+        run: |
+          export SYMCRYPT_HOME=$GITHUB_WORKSPACE/symcrypt
+          export PQCRYPTO_HOME=$GITHUB_WORKSPACE/pqcrypto-lweke
+          export BZIP2_HOME=$GITHUB_WORKSPACE/bzip2
+          nix develop "$GITHUB_WORKSPACE/circus-green#scylla" --command make test
+
+      - name: Check output
+        working-directory: scylla
+        run: |
+          # Check that there are no differences between the generated outputs
+          # and the committed outputs.
+          if git diff --exit-code --quiet out > /dev/null; then
+            echo "Ok: the regenerated files are the same as the checked out files"
+          else
+            echo "Error: the regenerated files differ from the checked out files"
+            git diff out
+            exit 1
+          fi
+
   ml-kem:
     needs: update-flake
     runs-on: [self-hosted, linux, nix]
@@ -103,7 +170,7 @@ jobs:
       - run: ./check.sh bertie
 
   process_results:
-    needs: [hax, charon, aeneas, eurydice, ml-kem, ml-dsa, bertie]
+    needs: [hax, charon, aeneas, eurydice, scylla, ml-kem, ml-dsa, bertie]
     runs-on: [self-hosted, linux, nix]
     if: ${{ success() || failure() }} # Will always run unless canceled
     steps:
