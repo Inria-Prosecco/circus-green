@@ -11,7 +11,6 @@
     charon = {
       url = "github:aeneasverif/charon";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nixpkgs-ocaml.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
     aeneas = {
