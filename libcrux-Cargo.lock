@@ -146,7 +146,7 @@ dependencies = [
  "bitflags",
  "cexpr",
  "clang-sys",
- "itertools 0.13.0",
+ "itertools",
  "log",
  "prettyplease",
  "proc-macro2",
@@ -300,9 +300,9 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.5.37"
+version = "4.5.49"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eccb054f56cbd38340b380d4a8e69ef1f02f1af43db2f0cc817a4774d80ae071"
+checksum = "f4512b90fa68d3a9932cea5184017c5d200f5921df706d45e853537dea51508f"
 dependencies = [
  "clap_builder",
  "clap_derive",
@@ -310,9 +310,9 @@ dependencies = [
 
 [[package]]
 name = "clap_builder"
-version = "4.5.37"
+version = "4.5.49"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "efd9466fac8543255d3b1fcad4762c5e116ffe808c8a3043d4263cd4fd4862a2"
+checksum = "0025e98baa12e766c67ba13ff4695a887a1eba19569aad00a472546795bd6730"
 dependencies = [
  "anstream",
  "anstyle",
@@ -322,9 +322,9 @@ dependencies = [
 
 [[package]]
 name = "clap_derive"
-version = "4.5.32"
+version = "4.5.49"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "09176aae279615badda0765c0c0b3f6ed53f4709118af73cf4655d85d1530cd7"
+checksum = "2a0b5487afeab2deb2ff4e03a807ad1a03ac532ff5a2cee5d86884440c7f7671"
 dependencies = [
  "heck",
  "proc-macro2",
@@ -363,7 +363,7 @@ checksum = "c2459377285ad874054d797f3ccebf984978aa39129f6eafde5cdc8315b612f8"
 
 [[package]]
 name = "core-models"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "hax-lib",
  "pastey",
@@ -381,16 +381,16 @@ dependencies = [
 
 [[package]]
 name = "criterion"
-version = "0.6.0"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3bf7af66b0989381bd0be551bd7cc91912a655a58c6918420c9527b1fd8b4679"
+checksum = "e1c047a62b0cc3e145fa84415a3191f628e980b194c2755aa12300a4e6cbd928"
 dependencies = [
  "anes",
  "cast",
  "ciborium",
  "clap",
  "criterion-plot",
- "itertools 0.13.0",
+ "itertools",
  "num-traits",
  "oorandom",
  "plotters",
@@ -404,12 +404,12 @@ dependencies = [
 
 [[package]]
 name = "criterion-plot"
-version = "0.5.0"
+version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6b50826342786a51a89e2da3a28f1c32b06e387201bc2d19791f622c673706b1"
+checksum = "9b1bcc0dc7dfae599d84ad0b1a55f80cde8af3725da8313b528da95ef783e338"
 dependencies = [
  "cast",
- "itertools 0.10.5",
+ "itertools",
 ]
 
 [[package]]
@@ -739,9 +739,9 @@ dependencies = [
 
 [[package]]
 name = "hax-lib"
-version = "0.3.1"
+version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a89999d4446ba7d86c777bc6a30c106b9bf60d12eb1952242af5d1d7cb33943d"
+checksum = "74d9ba66d1739c68e0219b2b2238b5c4145f491ebf181b9c6ab561a19352ae86"
 dependencies = [
  "hax-lib-macros",
  "num-bigint",
@@ -750,9 +750,9 @@ dependencies = [
 
 [[package]]
 name = "hax-lib-macros"
-version = "0.3.1"
+version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "704a31fb12a8c50243e8d4c88d006f64852822b0e24488a0de9986803a661792"
+checksum = "24ba777a231a58d1bce1d68313fa6b6afcc7966adef23d60f45b8a2b9b688bf1"
 dependencies = [
  "hax-lib-macros-types",
  "proc-macro-error2",
@@ -763,9 +763,9 @@ dependencies = [
 
 [[package]]
 name = "hax-lib-macros-types"
-version = "0.3.1"
+version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f302d2a43ba5888c61454ffeb8719dc43e7c0e83082d0fe302ac82d8d898b075"
+checksum = "867e19177d7425140b417cd27c2e05320e727ee682e98368f88b7194e80ad515"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -844,15 +844,6 @@ name = "is_terminal_polyfill"
 version = "1.70.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7943c866cc5cd64cbc25b2e01621d07fa8eb2a1a23160ee81ce38704e97b8ecf"
-
-[[package]]
-name = "itertools"
-version = "0.10.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b0fd2260e829bddf4cb6ea802289de2f86d6a7a690192fbe91b3f46e0f2c8473"
-dependencies = [
- "either",
-]
 
 [[package]]
 name = "itertools"
@@ -958,7 +949,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-blake2"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "criterion",
  "libcrux-hacl-rs",
@@ -968,12 +959,13 @@ dependencies = [
 
 [[package]]
 name = "libcrux-chacha20poly1305"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "hex",
  "libcrux-hacl-rs",
  "libcrux-macros",
  "libcrux-poly1305",
+ "libcrux-traits",
  "rand_core 0.9.3",
  "serde",
  "serde_json",
@@ -981,15 +973,16 @@ dependencies = [
 
 [[package]]
 name = "libcrux-curve25519"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
+ "libcrux-traits",
 ]
 
 [[package]]
 name = "libcrux-ecdh"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "hex",
  "libcrux-curve25519",
@@ -999,28 +992,31 @@ dependencies = [
  "rand_core 0.9.3",
  "serde",
  "serde_json",
+ "tls_codec",
 ]
 
 [[package]]
 name = "libcrux-ecdsa"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "libcrux-p256",
  "libcrux-sha2",
  "rand 0.9.1",
+ "rand_core 0.9.3",
  "serde",
  "serde_json",
 ]
 
 [[package]]
 name = "libcrux-ed25519"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
  "libcrux-sha2",
  "rand 0.9.1",
  "rand_core 0.9.3",
+ "tls_codec",
  "wycheproof",
 ]
 
@@ -1046,14 +1042,14 @@ dependencies = [
 
 [[package]]
 name = "libcrux-hacl-rs"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "libcrux-macros",
 ]
 
 [[package]]
 name = "libcrux-hkdf"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-hmac",
@@ -1061,7 +1057,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-hmac"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1070,7 +1066,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-intrinsics"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "core-models",
  "hax-lib",
@@ -1078,20 +1074,23 @@ dependencies = [
 
 [[package]]
 name = "libcrux-kem"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "hex",
+ "libcrux-curve25519",
  "libcrux-ecdh",
  "libcrux-kem",
  "libcrux-ml-kem",
+ "libcrux-p256",
  "libcrux-sha3",
  "libcrux-traits",
  "rand 0.9.1",
+ "tls_codec",
 ]
 
 [[package]]
 name = "libcrux-macros"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "quote",
  "syn 2.0.101",
@@ -1099,7 +1098,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ml-dsa"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "core-models",
  "criterion",
@@ -1117,7 +1116,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ml-kem"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "criterion",
  "hax-lib",
@@ -1126,9 +1125,11 @@ dependencies = [
  "libcrux-platform",
  "libcrux-secrets",
  "libcrux-sha3",
+ "libcrux-traits",
  "rand 0.9.1",
  "serde",
  "serde_json",
+ "tls_codec",
 ]
 
 [[package]]
@@ -1141,11 +1142,12 @@ dependencies = [
 
 [[package]]
 name = "libcrux-p256"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
  "libcrux-sha2",
+ "libcrux-traits",
 ]
 
 [[package]]
@@ -1157,7 +1159,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-poly1305"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1174,7 +1176,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-psq"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "clap",
  "classic-mceliece-rust",
@@ -1185,17 +1187,20 @@ dependencies = [
  "libcrux-hkdf",
  "libcrux-hmac",
  "libcrux-kem",
+ "libcrux-ml-kem",
  "libcrux-psq",
+ "libcrux-sha2",
  "libcrux-traits",
  "log",
  "pretty_env_logger",
  "rand 0.8.5",
  "rand 0.9.1",
+ "tls_codec",
 ]
 
 [[package]]
 name = "libcrux-rsa"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1206,7 +1211,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-secrets"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "criterion",
  "hax-lib",
@@ -1214,7 +1219,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-sha2"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "hex",
  "libcrux-hacl-rs",
@@ -1224,9 +1229,10 @@ dependencies = [
 
 [[package]]
 name = "libcrux-sha3"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "cavp",
+ "clap",
  "criterion",
  "hax-lib",
  "hex",
@@ -1238,15 +1244,16 @@ dependencies = [
 
 [[package]]
 name = "libcrux-test-utils"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
  "libcrux-macros",
 ]
 
 [[package]]
 name = "libcrux-traits"
-version = "0.0.3-alpha.3"
+version = "0.0.3"
 dependencies = [
+ "libcrux-secrets",
  "rand 0.9.1",
 ]
 
@@ -2044,6 +2051,27 @@ checksum = "be4d6b5f19ff7664e8c98d03e2139cb510db9b0a60b55f8e8709b689d939b6bc"
 dependencies = [
  "serde",
  "serde_json",
+]
+
+[[package]]
+name = "tls_codec"
+version = "0.4.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0de2e01245e2bb89d6f05801c564fa27624dbd7b1846859876c7dad82e90bf6b"
+dependencies = [
+ "tls_codec_derive",
+ "zeroize",
+]
+
+[[package]]
+name = "tls_codec_derive"
+version = "0.4.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2d2e76690929402faae40aebdda620a2c0e25dd6d3b9afe48867dfd95991f4bd"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.101",
 ]
 
 [[package]]
