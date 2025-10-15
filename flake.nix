@@ -3,6 +3,8 @@
   # take good care to avoid duplicated inputs to save on evaluation time.
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
+    # Old nixpkgs that supports llvmPackages_15
+    nixpkgs_old.url = "github:nixos/nixpkgs/nixos-25.05";
     flake-utils.follows = "fstar/flake-utils";
     karamel.follows = "eurydice/karamel";
     fstar.follows = "eurydice/karamel/fstar";
@@ -11,7 +13,6 @@
     charon = {
       url = "github:aeneasverif/charon";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nixpkgs-ocaml.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
     aeneas = {
@@ -28,10 +29,8 @@
     };
     hax = {
       url = "github:hacspec/hax";
-      inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
       inputs.rust-overlay.follows = "rust-overlay";
-      inputs.fstar.follows = "fstar";
       inputs.crane.follows = "crane";
     };
     libcrux = {
@@ -50,7 +49,7 @@
     };
     scylla = {
       url = "github:aeneasverif/scylla";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs_old";
       inputs.flake-utils.follows = "flake-utils";
       inputs.karamel.follows = "karamel";
     };

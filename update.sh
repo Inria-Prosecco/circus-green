@@ -2,6 +2,7 @@
 
 # Update `flake.lock`. Also force-update karamel and fstar.
 # We list the inputs to avoid updating nixpkgs too.
+NIXPKGS="$(jq -r .nodes.nixpkgs.locked.rev flake.lock)"
 nix flake update \
    hax charon aeneas eurydice libcrux bertie \
    --override-input hax "github:hacspec/hax" \
@@ -10,6 +11,7 @@ nix flake update \
    --override-input eurydice "github:aeneasverif/eurydice" \
    --override-input eurydice/karamel "github:FStarLang/karamel" \
    --override-input eurydice/karamel/fstar "github:FStarLang/fstar" \
+   --override-input eurydice/karamel/fstar/nixpkgs "github:nixos/nixpkgs/$NIXPKGS" \
    --override-input libcrux "github:cryspen/libcrux" \
    --override-input bertie "github:cryspen/bertie"
 
