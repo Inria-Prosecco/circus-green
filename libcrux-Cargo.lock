@@ -139,9 +139,9 @@ dependencies = [
 
 [[package]]
 name = "bindgen"
-version = "0.71.1"
+version = "0.72.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5f58bf3d7db68cfbac37cfc485a8d711e87e064c3d0fe0435b92f7a407f9d6b3"
+checksum = "4f72209734318d0b619a5e0f5129918b848c416e122a3c4ce054e03cb87b726f"
 dependencies = [
  "bitflags",
  "cexpr",
@@ -363,7 +363,7 @@ checksum = "c2459377285ad874054d797f3ccebf984978aa39129f6eafde5cdc8315b612f8"
 
 [[package]]
 name = "core-models"
-version = "0.0.2"
+version = "0.0.3-alpha.3"
 dependencies = [
  "hax-lib",
  "pastey",
@@ -958,7 +958,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-blake2"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "criterion",
  "libcrux-hacl-rs",
@@ -968,7 +968,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-chacha20poly1305"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "hex",
  "libcrux-hacl-rs",
@@ -981,7 +981,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-curve25519"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -989,7 +989,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ecdh"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "hex",
  "libcrux-curve25519",
@@ -1003,7 +1003,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ecdsa"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "libcrux-p256",
  "libcrux-sha2",
@@ -1014,7 +1014,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ed25519"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1046,14 +1046,14 @@ dependencies = [
 
 [[package]]
 name = "libcrux-hacl-rs"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "libcrux-macros",
 ]
 
 [[package]]
 name = "libcrux-hkdf"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-hmac",
@@ -1061,7 +1061,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-hmac"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1070,7 +1070,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-intrinsics"
-version = "0.0.2"
+version = "0.0.3-alpha.3"
 dependencies = [
  "core-models",
  "hax-lib",
@@ -1078,7 +1078,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-kem"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "hex",
  "libcrux-ecdh",
@@ -1091,7 +1091,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-macros"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "quote",
  "syn 2.0.101",
@@ -1099,7 +1099,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ml-dsa"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "core-models",
  "criterion",
@@ -1117,7 +1117,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-ml-kem"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "criterion",
  "hax-lib",
@@ -1141,7 +1141,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-p256"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1157,7 +1157,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-poly1305"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1174,7 +1174,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-psq"
-version = "0.0.3-alpha.2"
+version = "0.0.3-alpha.3"
 dependencies = [
  "clap",
  "classic-mceliece-rust",
@@ -1195,7 +1195,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-rsa"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "libcrux-hacl-rs",
  "libcrux-macros",
@@ -1206,7 +1206,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-secrets"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "criterion",
  "hax-lib",
@@ -1214,7 +1214,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-sha2"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "hex",
  "libcrux-hacl-rs",
@@ -1224,7 +1224,7 @@ dependencies = [
 
 [[package]]
 name = "libcrux-sha3"
-version = "0.0.2"
+version = "0.0.3-alpha.3"
 dependencies = [
  "cavp",
  "criterion",
@@ -1238,14 +1238,14 @@ dependencies = [
 
 [[package]]
 name = "libcrux-test-utils"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "libcrux-macros",
 ]
 
 [[package]]
 name = "libcrux-traits"
-version = "0.0.3-alpha.1"
+version = "0.0.3-alpha.3"
 dependencies = [
  "rand 0.9.1",
 ]
