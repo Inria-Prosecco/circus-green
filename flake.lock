@@ -377,11 +377,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1759421741,
-        "narHash": "sha256-vc4WZRmCcm2Ub9mSzkQyc7K2Br5eFVzta+WZ2/cZ2Uk=",
+        "lastModified": 1760596464,
+        "narHash": "sha256-nCUpxkV5ilnuCUfJS2nlQ8fZZvxh07jDVIawz4nyIFw=",
         "owner": "cryspen",
         "repo": "libcrux",
-        "rev": "2a86482d716650976b09e0f60f5c87aa166b5f41",
+        "rev": "74ae08976fdb9c1f17718d96ae4983a9c838146f",
         "type": "github"
       },
       "original": {
