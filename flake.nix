@@ -1,5 +1,5 @@
 {
-  # The inputs we care about are: hax, charon, eurydice, libcrux, bertie. We
+  # The inputs we care about are: hax, charon, eurydice, bertie. We
   # take good care to avoid duplicated inputs to save on evaluation time.
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
@@ -33,13 +33,6 @@
       inputs.rust-overlay.follows = "rust-overlay";
       inputs.crane.follows = "crane";
     };
-    libcrux = {
-      url = "github:cryspen/libcrux";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-      inputs.eurydice.follows = "eurydice";
-      inputs.hax.follows = "hax";
-    };
     bertie = {
       url = "github:cryspen/bertie";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -63,29 +56,14 @@
         aeneas = inputs.aeneas.packages.${system}.default;
         eurydice = inputs.eurydice.packages.${system}.default;
         scylla = inputs.scylla.devShells.${system}.default;
-        ml-kem = inputs.libcrux.packages.${system}.ml-kem.override {
-          cargoLock = ./libcrux-Cargo.lock;
-        };
-        ml-dsa = inputs.libcrux.packages.${system}.ml-dsa.override {
-          cargoLock = ./libcrux-Cargo.lock;
-        };
         bertie = inputs.bertie.packages.${system}.default ./bertie-Cargo.lock;
         inherit inputs;
       };
-      checks = rec {
+      checks = {
         hax = inputs.hax.checks.${system}.toolchain;
         charon = inputs.charon.checks.${system}.charon-ml-tests;
         aeneas = inputs.aeneas.checks.${system}.default;
         eurydice = inputs.eurydice.checks.${system}.default;
-        ml-kem = packages.ml-kem;
-        ml-kem-small = ml-kem.override {
-          checkHax = false;
-          runBenchmarks = false;
-        };
-        ml-dsa = packages.ml-dsa;
-        ml-dsa-small = ml-dsa.override {
-          checkHax = false;
-        };
         bertie = packages.bertie;
       };
       # Make a dev-shell with an appropriate rust toolchain, used to regenerate

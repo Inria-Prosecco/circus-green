@@ -31,23 +31,6 @@
         "type": "github"
       }
     },
-    "benchmark": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1716472966,
-        "narHash": "sha256-O+1ZHaNHSkKz3PlKDyI94LqiLtjyrKxjOIi8Q236/MI=",
-        "owner": "google",
-        "repo": "benchmark",
-        "rev": "a4cf155615c63e019ae549e31703bf367df5b471",
-        "type": "github"
-      },
-      "original": {
-        "owner": "google",
-        "ref": "v1.8.4",
-        "repo": "benchmark",
-        "type": "github"
-      }
-    },
     "bertie": {
       "inputs": {
         "crane": [
@@ -100,22 +83,6 @@
       "original": {
         "owner": "aeneasverif",
         "repo": "charon",
-        "type": "github"
-      }
-    },
-    "circus-green": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1749951461,
-        "narHash": "sha256-MTz3zyP37BhEyvAALFB3fnglPzlMk+ZYwfcQcuaTc6k=",
-        "owner": "Inria-Prosecco",
-        "repo": "circus-green",
-        "rev": "d0016701f739d64013b4fc01a78f8c367d4fcc7a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Inria-Prosecco",
-        "repo": "circus-green",
         "type": "github"
       }
     },
@@ -249,23 +216,6 @@
         "type": "github"
       }
     },
-    "googletest": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1623433346,
-        "narHash": "sha256-SjlJxushfry13RGA7BCjYC9oZqV4z6x8dOiHfl/wpF0=",
-        "owner": "google",
-        "repo": "googletest",
-        "rev": "e2239ee6043f73722e7aa812a459f54a28552929",
-        "type": "github"
-      },
-      "original": {
-        "owner": "google",
-        "ref": "release-1.11.0",
-        "repo": "googletest",
-        "type": "github"
-      }
-    },
     "hacl-star": {
       "flake": false,
       "locked": {
@@ -312,23 +262,6 @@
         "type": "github"
       }
     },
-    "json": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1633696761,
-        "narHash": "sha256-EBzwaHyDWF8h/z3Zfq4p/n5Vpz7Ozlc3eoWDKXWv2YY=",
-        "owner": "nlohmann",
-        "repo": "json",
-        "rev": "aa0e847e5b57a00696bdcb6a834b927231b81613",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nlohmann",
-        "ref": "v3.10.3",
-        "repo": "json",
-        "type": "github"
-      }
-    },
     "karamel": {
       "inputs": {
         "flake-utils": [
@@ -354,39 +287,6 @@
       "original": {
         "owner": "FStarLang",
         "repo": "karamel",
-        "type": "github"
-      }
-    },
-    "libcrux": {
-      "inputs": {
-        "benchmark": "benchmark",
-        "circus-green": "circus-green",
-        "eurydice": [
-          "eurydice"
-        ],
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "googletest": "googletest",
-        "hax": [
-          "hax"
-        ],
-        "json": "json",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1760596464,
-        "narHash": "sha256-nCUpxkV5ilnuCUfJS2nlQ8fZZvxh07jDVIawz4nyIFw=",
-        "owner": "cryspen",
-        "repo": "libcrux",
-        "rev": "74ae08976fdb9c1f17718d96ae4983a9c838146f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "cryspen",
-        "repo": "libcrux",
         "type": "github"
       }
     },
@@ -450,6 +350,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_old": {
+      "locked": {
+        "lastModified": 1760423683,
+        "narHash": "sha256-Tb+NYuJhWZieDZUxN6PgglB16yuqBYQeMJyYBGCXlt8=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "a493e93b4a259cd9fea8073f89a7ed9b1c5a1da2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "aeneas": "aeneas",
@@ -474,8 +390,8 @@
           "eurydice",
           "karamel"
         ],
-        "libcrux": "libcrux",
         "nixpkgs": "nixpkgs_4",
+        "nixpkgs_old": "nixpkgs_old",
         "rust-overlay": [
           "charon",
           "rust-overlay"
@@ -551,7 +467,7 @@
           "karamel"
         ],
         "nixpkgs": [
-          "nixpkgs"
+          "nixpkgs_old"
         ],
         "rust-overlay": "rust-overlay_2"
       },
