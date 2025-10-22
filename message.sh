@@ -18,7 +18,7 @@ echo "run: https://github.com/inria-prosecco/circus-green/actions/runs/$RUN"
 echo ""
 
 echo "*Statuses:*"
-for project in hax charon aeneas eurydice scylla ml-kem ml-dsa bertie; do
+for project in hax charon aeneas eurydice scylla bertie; do
     status="$(jq -r 'if .["'"$project"'"].result == "success" then "✅" else "❌" end' results.json)"
     echo "$status $project (main)"
 done
@@ -28,7 +28,7 @@ echo "*Tried to update:*"
 git show origin/main:flake.lock > good.lock
 cat flake.lock good.lock | jq -s -r '
     map( .nodes |
-         [ .fstar, .karamel, .hax, .charon, .aeneas, .eurydice, .libcrux, .bertie ] |
+         [ .fstar, .karamel, .hax, .charon, .aeneas, .eurydice, .bertie ] |
          map( .locked )
     )
     | transpose

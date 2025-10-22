@@ -139,26 +139,6 @@ jobs:
             exit 1
           fi
 
-  ml-kem:
-    needs: update-flake
-    runs-on: [self-hosted, linux, nix]
-    steps:
-      - name: checkout
-        with:
-          ref: nightly
-        uses: actions/checkout@v4
-      - run: ./check.sh ml-kem
-
-  ml-dsa:
-    needs: update-flake
-    runs-on: [self-hosted, linux, nix]
-    steps:
-      - name: checkout
-        with:
-          ref: nightly
-        uses: actions/checkout@v4
-      - run: ./check.sh ml-dsa
-
   bertie:
     needs: update-flake
     runs-on: [self-hosted, linux, nix]
@@ -170,7 +150,7 @@ jobs:
       - run: ./check.sh bertie
 
   process_results:
-    needs: [hax, charon, aeneas, eurydice, scylla, ml-kem, ml-dsa, bertie]
+    needs: [hax, charon, aeneas, eurydice, scylla, bertie]
     runs-on: [self-hosted, linux, nix]
     if: ${{ success() || failure() }} # Will always run unless canceled
     steps:
