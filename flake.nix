@@ -12,12 +12,11 @@
     crane.follows = "charon/crane";
     charon = {
       url = "github:aeneasverif/charon";
-      inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
     aeneas = {
       url = "github:aeneasverif/aeneas";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "charon/nixpkgs";
       inputs.charon.follows = "charon";
       inputs.fstar.follows = "fstar";
     };
