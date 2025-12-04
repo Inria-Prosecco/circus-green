@@ -19,11 +19,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764682282,
-        "narHash": "sha256-6YhmQQ+RnpBubi68iu9SPtrvwOrdyErYT5zJ8VW5hmA=",
+        "lastModified": 1764772437,
+        "narHash": "sha256-k4MkwSjMofYb/GZyggLGrgy3pRYZBNcjjX1R+ULZGw8=",
         "owner": "aeneasverif",
         "repo": "aeneas",
-        "rev": "9adbf0ccea7f82b849b187179f24d69c97050d64",
+        "rev": "81c2c40bfbb3d3c5b4a9ce2f31f50d2d0734b2ce",
         "type": "github"
       },
       "original": {
@@ -89,11 +89,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1764693345,
-        "narHash": "sha256-kfVA5vbEN0IKA1jImo527XdZwXviU1DmNJJSZKKCGZA=",
+        "lastModified": 1764801272,
+        "narHash": "sha256-751n+JYDagp22VqKp7PkATEY8EasaEzvNRRD+8vsQt4=",
         "owner": "aeneasverif",
         "repo": "charon",
-        "rev": "a6e01a32eea6a8158227dc7cfc94aa20bc167faa",
+        "rev": "16cabfd4eb6de650afd86a812f40a400dcc5c6df",
         "type": "github"
       },
       "original": {
@@ -424,11 +424,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1764713798,
-        "narHash": "sha256-GjxMngEf3JUkibzOrCSdxoDLRw96f6wfiqwN9VKFQME=",
+        "lastModified": 1764790091,
+        "narHash": "sha256-h5lPLWcKy+ZBGStkBokU5o6qJyjRjS0btetMX07/0nI=",
         "owner": "FStarLang",
         "repo": "fstar",
-        "rev": "8b7f82ad4392dc76fab5e90ea198777875f1a2b2",
+        "rev": "c0899c5291ba0dd8312cc86be54b9a8c71bb1638",
         "type": "github"
       },
       "original": {
