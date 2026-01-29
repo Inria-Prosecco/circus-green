@@ -19,11 +19,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768833495,
-        "narHash": "sha256-Wc6yvmx8NRcEgQsYcdGkKR6GKR7AN9jvbA0WNIE/yRI=",
+        "lastModified": 1769621729,
+        "narHash": "sha256-vUGXVOexfFE52rBiUs0b2MOYrJDTxyInA5Gzxur0Tuw=",
         "owner": "aeneasverif",
         "repo": "aeneas",
-        "rev": "17c60d544d638442ac3b01bf4b5257940c519e12",
+        "rev": "3d97d7aad7b837acf053076ca62c75fdf7938d94",
         "type": "github"
       },
       "original": {
@@ -89,11 +89,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1769444822,
-        "narHash": "sha256-2zxNKEZqzkXCuIiq/7LnRwalbLcZ+AK8LlxHVm/+WiE=",
+        "lastModified": 1769619306,
+        "narHash": "sha256-7iOj3HlLNTfBd7T1ruuT5CzlJM2MDiiC9FFRKZNXtVQ=",
         "owner": "aeneasverif",
         "repo": "charon",
-        "rev": "d70eada076c81e46e64b9a17da16038a8e5a1ff1",
+        "rev": "954dc2a90088518f5c904165004b167749613ea1",
         "type": "github"
       },
       "original": {
@@ -220,11 +220,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768610152,
-        "narHash": "sha256-gHjRIs6VzNDyMCdKcV3e18BXjviHSMcX0Q+n6rOFplw=",
+        "lastModified": 1769608432,
+        "narHash": "sha256-hsfmiT0+RPvaJbb/4c+mAuQd/VNOOw2D3AOnBVAflg8=",
         "owner": "aeneasverif",
         "repo": "eurydice",
-        "rev": "a53eadf527de37585f3abc18e852adba2ea4c502",
+        "rev": "843d074eb485523a4cc8321cc593f64c563f4e54",
         "type": "github"
       },
       "original": {
@@ -586,11 +586,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769526646,
-        "narHash": "sha256-yyWtE7XNzEeiVbu+tmaG2zokqs47nyFEALNwRAhhbd8=",
+        "lastModified": 1769602596,
+        "narHash": "sha256-li7leiOnicr+PVE7WOjJLwt1Tcp3EsSTn0S4LIAniR4=",
         "owner": "hacspec",
         "repo": "hax",
-        "rev": "c14ede5e2e42efd8c2ef5262c915d055f4141796",
+        "rev": "c7db7ed440fa8a2482fe455d1338bade2f9bfd90",
         "type": "github"
       },
       "original": {
