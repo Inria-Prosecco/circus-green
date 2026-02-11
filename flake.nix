@@ -1,5 +1,5 @@
 {
-  # The inputs we care about are: hax, charon, eurydice, bertie. We
+  # The inputs we care about are: charon, eurydice, bertie. We
   # take good care to avoid duplicated inputs to save on evaluation time.
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
@@ -26,18 +26,9 @@
       inputs.flake-utils.follows = "flake-utils";
       inputs.charon.follows = "charon";
     };
-    hax = {
-      url = "github:hacspec/hax";
-      inputs.flake-utils.follows = "flake-utils";
-      inputs.rust-overlay.follows = "rust-overlay";
-      inputs.crane.follows = "crane";
-    };
     bertie = {
       url = "github:cryspen/bertie";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-      inputs.crane.follows = "crane";
-      inputs.hax.follows = "hax";
+      flake = false;
     };
     scylla = {
       url = "github:aeneasverif/scylla";
@@ -50,16 +41,29 @@
   outputs = inputs:
     inputs.flake-utils.lib.eachDefaultSystem (system: rec {
       packages = {
-        hax = inputs.hax.packages.${system}.hax;
         charon = inputs.charon.packages.${system}.default;
         aeneas = inputs.aeneas.packages.${system}.default;
         eurydice = inputs.eurydice.packages.${system}.default;
         scylla = inputs.scylla.devShells.${system}.default;
-        bertie = inputs.bertie.packages.${system}.default ./bertie-Cargo.lock;
+        bertie =
+          let
+            pkgs = import inputs.nixpkgs { inherit system; };
+            bertie_llbc = inputs.charon.extractCrateWithCharon.${system} {
+              name = "bertie";
+              src = pkgs.runCommand "bertie-src" { } ''
+                cp -r ${inputs.bertie} $out
+                chmod u+w $out
+                rm -f $out/Cargo.lock
+                cp ${./bertie-Cargo.lock} $out/Cargo.lock
+              '';
+              charonArgs = "--preset=aeneas";
+              cargoArgs = "-p bertie";
+            };
+          in
+          bertie_llbc;
         inherit inputs;
       };
       checks = {
-        hax = inputs.hax.checks.${system}.toolchain;
         charon = inputs.charon.checks.${system}.charon-ml-tests;
         aeneas = inputs.aeneas.checks.${system}.default;
         eurydice = inputs.eurydice.checks.${system}.default;
