@@ -4,8 +4,7 @@
 # We list the inputs to avoid updating nixpkgs too.
 NIXPKGS="$(jq -r .nodes.nixpkgs.locked.rev flake.lock)"
 nix flake update \
-   hax charon aeneas eurydice bertie \
-   --override-input hax "github:hacspec/hax" \
+   charon aeneas eurydice bertie \
    --override-input charon "github:aeneasverif/charon" \
    --override-input aeneas "github:aeneasverif/aeneas" \
    --override-input eurydice "github:aeneasverif/eurydice" \

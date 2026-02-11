@@ -32,16 +32,6 @@ jobs:
   # This would be nicer as a matrix, but that hits limits of what github actions can currenctly express. See e.g.:
   # - https://github.com/orgs/community/discussions/17245
   # - https://github.com/actions/runner/pull/2477
-  hax:
-    needs: update-flake
-    runs-on: [self-hosted, linux, nix]
-    steps:
-      - name: checkout
-        uses: actions/checkout@v4
-        with:
-          ref: nightly
-      - run: ./check.sh hax
-
   charon:
     needs: update-flake
     runs-on: [self-hosted, linux, nix]
@@ -150,7 +140,7 @@ jobs:
       - run: ./check.sh bertie
 
   process_results:
-    needs: [hax, charon, aeneas, eurydice, scylla, bertie]
+    needs: [charon, aeneas, eurydice, scylla, bertie]
     runs-on: [self-hosted, linux, nix]
     if: ${{ success() || failure() }} # Will always run unless canceled
     steps:
