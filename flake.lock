@@ -19,11 +19,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1770856403,
-        "narHash": "sha256-4IOC0aJENRl3krycjJHKoxmuyFg2E3kadry+WQEIJXg=",
+        "lastModified": 1770900648,
+        "narHash": "sha256-OmrI45CPI3ZR1uqnueH9Ky+Ucf8Jkz8e6ye/6gXsnT4=",
         "owner": "aeneasverif",
         "repo": "aeneas",
-        "rev": "f6a868224d8c7cb810c9e642dcabcba9c93ee4da",
+        "rev": "74749a04c82d9e21544ec602f54f57ac530713e0",
         "type": "github"
       },
       "original": {
