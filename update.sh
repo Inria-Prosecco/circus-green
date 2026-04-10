@@ -9,8 +9,6 @@ nix flake update \
    --override-input aeneas "github:aeneasverif/aeneas" \
    --override-input eurydice "github:aeneasverif/eurydice" \
    --override-input eurydice/karamel "github:FStarLang/karamel" \
-   --override-input eurydice/karamel/fstar "github:FStarLang/fstar" \
-   --override-input eurydice/karamel/fstar/nixpkgs "github:nixos/nixpkgs/$NIXPKGS" \
    --override-input bertie "github:cryspen/bertie"
 
 ./update-cargo-lock.sh bertie
