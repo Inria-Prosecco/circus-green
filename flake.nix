@@ -18,7 +18,6 @@
       url = "github:aeneasverif/aeneas";
       inputs.nixpkgs.follows = "charon/nixpkgs";
       inputs.charon.follows = "charon";
-      inputs.fstar.follows = "fstar";
     };
     eurydice = {
       url = "github:aeneasverif/eurydice";
