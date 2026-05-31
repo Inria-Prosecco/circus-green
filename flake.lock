@@ -403,6 +403,23 @@
         "type": "indirect"
       }
     },
+    "flake-utils_8": {
+      "inputs": {
+        "systems": "systems_8"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "id": "flake-utils",
+        "type": "indirect"
+      }
+    },
     "fstar": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -478,6 +495,26 @@
         "owner": "FStarLang",
         "ref": "v2025.03.25",
         "repo": "FStar",
+        "type": "github"
+      }
+    },
+    "fstar_5": {
+      "inputs": {
+        "flake-utils": "flake-utils_8",
+        "karamel-src": "karamel-src_2",
+        "nixpkgs": "nixpkgs_10"
+      },
+      "locked": {
+        "lastModified": 1777601614,
+        "narHash": "sha256-jjp57uXzdcmNxpIzACPvSl/aGgs3IXsQt1yjSbgqdGU=",
+        "owner": "fstarlang",
+        "repo": "fstar",
+        "rev": "6e43470b7fb5495f50e79410aad6c8afde76a7d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fstarlang",
+        "repo": "fstar",
         "type": "github"
       }
     },
@@ -600,6 +637,23 @@
         "type": "github"
       }
     },
+    "karamel-src_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1774904518,
+        "narHash": "sha256-bwooU4bmESYnUA+O43r0yJsIHWFSz5AGEbz/7F5h/+A=",
+        "owner": "FStarLang",
+        "repo": "karamel",
+        "rev": "7bdb6cb2fd7661f4a0dade9ccae810451cb51746",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FStarLang",
+        "ref": "fstar2",
+        "repo": "karamel",
+        "type": "github"
+      }
+    },
     "karamel_2": {
       "inputs": {
         "flake-utils": [
@@ -624,6 +678,34 @@
         "owner": "FStarLang",
         "repo": "karamel",
         "rev": "27ad449ff34f44dfc84ca48bb5b77304a39459d9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FStarLang",
+        "repo": "karamel",
+        "type": "github"
+      }
+    },
+    "karamel_3": {
+      "inputs": {
+        "flake-utils": [
+          "scylla",
+          "karamel",
+          "fstar",
+          "flake-utils"
+        ],
+        "fstar": "fstar_5",
+        "nixpkgs": [
+          "scylla",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1777587961,
+        "narHash": "sha256-JAGE73o4pGPL/XOfNJvU1Xes+SvPEGkUH9477vXv7CI=",
+        "owner": "FStarLang",
+        "repo": "karamel",
+        "rev": "79f86035c70ef275c0b81efea4df56f3919dcd56",
         "type": "github"
       },
       "original": {
@@ -658,6 +740,21 @@
       }
     },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1759381078,
+        "narHash": "sha256-gTrEEp5gEspIcCOx9PD8kMaF1iEmfBcTbO0Jag2QhQs=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "7df7ff7d8e00218376575f0acdcc5d66741351ee",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_10": {
       "locked": {
         "lastModified": 1759381078,
         "narHash": "sha256-gTrEEp5gEspIcCOx9PD8kMaF1iEmfBcTbO0Jag2QhQs=",
@@ -953,9 +1050,7 @@
         "flake-utils": [
           "flake-utils"
         ],
-        "karamel": [
-          "karamel"
-        ],
+        "karamel": "karamel_3",
         "nixpkgs": [
           "nixpkgs_old"
         ],
@@ -1066,6 +1161,21 @@
       }
     },
     "systems_7": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_8": {
       "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
