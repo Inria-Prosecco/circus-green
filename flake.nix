@@ -33,7 +33,7 @@
       url = "github:aeneasverif/scylla";
       inputs.nixpkgs.follows = "nixpkgs_old";
       inputs.flake-utils.follows = "flake-utils";
-      inputs.karamel.follows = "karamel";
+      # inputs.karamel.follows = "karamel";
     };
   };
 
