@@ -17,11 +17,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780584090,
-        "narHash": "sha256-2zYRZ1azRSiYbu08OyK63GdYXMqQYHU/zPm3lbxxLek=",
+        "lastModified": 1780675763,
+        "narHash": "sha256-ppqq9Cp6MyD1uBjFaHOgOSPDaOL88T2buj42xXEr2Jk=",
         "owner": "aeneasverif",
         "repo": "aeneas",
-        "rev": "5c70d9b0f648fa1c0becb92cab15a5ace1e6c093",
+        "rev": "a2e779f00fc384c2f4d1131bbd573dc948ddf0d7",
         "type": "github"
       },
       "original": {
@@ -74,11 +74,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1780614263,
-        "narHash": "sha256-nmVjIoRME+jlGFxZLYaDe8dfOlqiIRCC2RP54VhKC5A=",
+        "lastModified": 1780697589,
+        "narHash": "sha256-QVCLQW3+E9XkAK/GkIV3nVylIdP1INkTnwNjx+DOwdA=",
         "owner": "aeneasverif",
         "repo": "charon",
-        "rev": "0df88b3e080092af35644336fe39943dcf8c59c7",
+        "rev": "72d6dd07bdc1a9a30939205002f6e2530371ac01",
         "type": "github"
       },
       "original": {
@@ -205,11 +205,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780569941,
-        "narHash": "sha256-zLdVR2i/pORF8gWPHG2Ixz12KxFscp3Zu74krOH22XE=",
+        "lastModified": 1780675759,
+        "narHash": "sha256-/faJtJH0g3lFxc4NjV+GWv3bnuxq/lJSB43APKGHOt8=",
         "owner": "aeneasverif",
         "repo": "eurydice",
-        "rev": "190772c87af9270f925f466e11ecadb537306809",
+        "rev": "b073bbd965354a35332926c6cf4d5890441f5fba",
         "type": "github"
       },
       "original": {
