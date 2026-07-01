@@ -1,17 +1,13 @@
 #!/usr/bin/env bash
 
 echo 'MSG<<EOF'
-echo "*Nightly update*"
+echo "## All-projects build with latest versions"
 if [[ "$(jq 'map(.result == "success") | all' results.json)" == "true" ]]; then
     SUCCESS=1
-    echo '✅✅✅'
 else
     SUCCESS=0
-    echo '❌❌❌'
 fi
-echo ""
 
-echo "*Links:*"
 COMMIT="$(git rev-parse HEAD)"
 echo "commit: https://github.com/inria-prosecco/circus-green/commit/$COMMIT"
 echo "run: https://github.com/inria-prosecco/circus-green/actions/runs/$RUN"
