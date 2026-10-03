@@ -124,7 +124,7 @@ dependencies = [
  "bytesize",
  "criterion",
  "dhat",
- "hax-lib 0.3.1",
+ "hax-lib 0.4.2",
  "hex",
  "libcrux-chacha20poly1305",
  "libcrux-ecdsa",
@@ -395,11 +395,11 @@ dependencies = [
 
 [[package]]
 name = "hax-lib"
-version = "0.3.1"
+version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a89999d4446ba7d86c777bc6a30c106b9bf60d12eb1952242af5d1d7cb33943d"
+checksum = "fb3bfcfc915e894c331662e4ac76706b777a5956535ea24535f4df30da04b1bf"
 dependencies = [
- "hax-lib-macros 0.3.1",
+ "hax-lib-macros 0.4.2",
  "num-bigint",
  "num-traits",
 ]
@@ -420,12 +420,11 @@ dependencies = [
 
 [[package]]
 name = "hax-lib-macros"
-version = "0.3.1"
+version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "704a31fb12a8c50243e8d4c88d006f64852822b0e24488a0de9986803a661792"
+checksum = "6e9010990fcba1d1494047fa433a433be0a5df23653a9784c739f7bba270272e"
 dependencies = [
- "hax-lib-macros-types 0.3.1",
- "proc-macro-error2",
+ "hax-lib-macros-types 0.4.2",
  "proc-macro2",
  "quote",
  "syn 2.0.101",
@@ -446,9 +445,9 @@ dependencies = [
 
 [[package]]
 name = "hax-lib-macros-types"
-version = "0.3.1"
+version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f302d2a43ba5888c61454ffeb8719dc43e7c0e83082d0fe302ac82d8d898b075"
+checksum = "e053e3a5aeb92df47b07323180c5088edc488ca49883a234f6c73255c54cc520"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -995,28 +994,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "version_check",
-]
-
-[[package]]
-name = "proc-macro-error-attr2"
-version = "2.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "96de42df36bb9bba5542fe9f1a054b8cc87e172759a1868aa05c1f3acc89dfc5"
-dependencies = [
- "proc-macro2",
- "quote",
-]
-
-[[package]]
-name = "proc-macro-error2"
-version = "2.0.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "11ec05c52be0a07b08061f7dd003e7d7092e0472bc731b4af7bb1ef876109802"
-dependencies = [
- "proc-macro-error-attr2",
- "proc-macro2",
- "quote",
- "syn 2.0.101",
 ]
 
 [[package]]
