@@ -18,11 +18,11 @@
         "nixpkgs-hol4": "nixpkgs-hol4"
       },
       "locked": {
-        "lastModified": 1794245478,
-        "narHash": "sha256-D+/Xq7lPn+84woUZo3pl8/tFxmCmCg2GeFqSAeDIM1k=",
+        "lastModified": 1794688096,
+        "narHash": "sha256-w+NV5B+gybrvXsviIsOBliX2l0KHHhyL9jutDE6rxVk=",
         "owner": "aeneasverif",
         "repo": "aeneas",
-        "rev": "0d21a9ec7bbbb110110cacc14464a47fd71c8705",
+        "rev": "1dc8ad31b1b062a77c50e29144a6c7bba955fa09",
         "type": "github"
       },
       "original": {
